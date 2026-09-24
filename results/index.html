@@ -935,6 +935,924 @@ a:hover{opacity:0.82}
 
 </div>
 </div>
+<template id="cx-phone-style">
+body{margin:0;background:#ECECE9}
+a{color:inherit;text-decoration:none}
+a:hover{opacity:0.82}
+@keyframes cxscan{from{stroke-dashoffset:30}to{stroke-dashoffset:-306}}
+@keyframes cxlive{0%,100%{opacity:1}50%{opacity:0.25}}
+.cx-scan{animation:cxscan 5s linear infinite}
+.cx-live{animation:cxlive 2.4s ease-in-out infinite}
+@media (prefers-reduced-motion: reduce){.cx-scan{animation:none;opacity:0}.cx-live{animation:none}}
+</template>
+<template id="cx-phone" data-bg="#ECECE9">
+<div style="width: 390px; height: 10964px; position: relative; overflow: hidden; font-family: 'Newsreader', Georgia, serif; color: #111111; background: #ECECE9">
+
+<!-- NAV · 64 -->
+<header style="height: 64px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; padding: 0 20px; border-bottom: 1px solid #CBCBC6; background: #ECECE9">
+  <a href="../" style="display: flex; align-items: center; color: #111111; text-decoration: none">
+    <span style="display: flex; align-items: center; height: 44px; box-sizing: border-box; background: #111111; padding: 0 12px 0 9px"><img src="../assets/connexah-logo.png" alt="Connexah" style="height: 28px; width: auto; display: block"></span>
+  </a>
+  <a href="#" aria-label="Menu" style="width: 44px; height: 44px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; background: #FFFFFF; border: 1px solid #111111; color: #111111"><svg width="20" height="14" viewBox="0 0 20 14" style="display: block"><path d="M1,1.5 H19 M1,7 H19 M1,12.5 H19" fill="none" stroke="#111111" stroke-width="1.5"></path></svg></a>
+</header>
+
+<!-- HERO · 1350 -->
+<section style="height: 1350px; box-sizing: border-box; padding: 36px 20px 0; background: #ECECE9; display: flex; flex-direction: column">
+  <div style="display: flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #4A4A47"><span style="display: block; width: 10px; height: 10px; background: #F2C300; border: 1px solid #111111; box-sizing: border-box"></span>Results</div>
+  <h1 style="margin: 16px 0 0; font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 40px; line-height: 1.05; letter-spacing: 0; color: #111111">What we built,<br>and what came of it.</h1>
+  <p style="margin: 20px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 19px; line-height: 1.45; color: #111111">Real clients, described without names.</p>
+  <div style="margin-top: 20px; display: flex; align-items: flex-start; gap: 12px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12.5px; line-height: 1.6; color: #111111"><span style="display: block; flex: none; width: 10px; height: 10px; margin-top: 5px; background: #F2C300; border: 1px solid #111111; box-sizing: border-box"></span><span>Every number comes from our own records.</span></div>
+
+  <!-- report window: the records sheet under a line gauge, with detail A enlarged beneath -->
+  <div style="margin-top: 32px; height: 942px; flex: none; box-sizing: border-box; background: #FFFFFF; border: 1px solid #CBCBC6; box-shadow: 0 1px 2px rgba(17,17,17,0.05), 0 40px 80px -40px rgba(17,17,17,0.28); display: flex; flex-direction: column; overflow: hidden">
+    <div style="height: 40px; flex: none; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; padding: 0 14px; border-bottom: 1px solid #CBCBC6; background: #F6F6F3">
+      <div style="display: flex; align-items: center; gap: 14px">
+        <div style="display: flex; gap: 6px">
+          <span style="display: block; width: 9px; height: 9px; background: #F2C300; border: 1px solid #111111; box-sizing: border-box"></span>
+          <span style="display: block; width: 9px; height: 9px; border: 1px solid #111111; box-sizing: border-box"></span>
+          <span style="display: block; width: 9px; height: 9px; border: 1px solid #111111; box-sizing: border-box"></span>
+        </div>
+        <span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; color: #4A4A47">connexah / our records</span>
+      </div>
+      <span style="display: flex; align-items: center; gap: 8px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; color: #4A4A47"><span style="display: block; width: 14px; height: 9px; border: 1px dashed #111111; border-radius: 50%; box-sizing: border-box"></span>Detail A</span>
+    </div>
+    <div style="height: 900px; flex: none">
+      <svg width="348" height="900" viewBox="0 0 348 900" style="display: block">
+        <defs>
+          <pattern id="rmDots" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="0.9" fill="#D3D3CE"></circle></pattern>
+          <pattern id="rmGMinor" x="8" y="10" width="26" height="8.5" patternUnits="userSpaceOnUse"><rect x="18" y="0" width="8" height="1" fill="#111111"></rect></pattern>
+          <pattern id="rmGMajor" x="8" y="10" width="26" height="34" patternUnits="userSpaceOnUse"><rect x="10" y="0" width="16" height="1.4" fill="#111111"></rect></pattern>
+          <pattern id="rmMini" x="35" y="0" width="1.49" height="900" patternUnits="userSpaceOnUse"><rect x="0" y="866" width="0.6" height="10" fill="#8A8A85"></rect></pattern>
+        </defs>
+        <rect x="0" y="0" width="348" height="900" fill="url(#rmDots)"></rect>
+        <g font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">
+          <!-- stack of reports -->
+          <rect x="20.5" y="20.5" width="311" height="620" fill="#F6F6F3" stroke="#CBCBC6" stroke-width="1" transform="rotate(-1.2 176 330)"></rect>
+          <rect x="20.5" y="20.5" width="311" height="620" fill="#FFFFFF" stroke="#CBCBC6" stroke-width="1" transform="rotate(0.8 176 330)"></rect>
+
+          <!-- the report sheet -->
+          <rect x="20.5" y="20.5" width="311" height="620" fill="#FFFFFF" stroke="#111111" stroke-width="1"></rect>
+          <rect x="20.5" y="20.5" width="311" height="36" fill="#111111"></rect>
+          <rect x="36" y="33.5" width="10" height="10" fill="#F2C300"></rect>
+          <text x="54" y="42.5" font-size="11" font-weight="700" fill="#FFFFFF">Our own records</text>
+
+          <rect x="56" y="84.5" width="202" height="15" fill="#F2C300"></rect>
+          <path d="M44,105.5 H320 M44,145.5 H320 M44,185.5 H320 M44,239.5 H320 M44,293.5 H320 M44,347.5 H320 M44,387.5 H320 M44,441.5 H320 M44,495.5 H320 M44,535.5 H320 M44,589.5 H320" fill="none" stroke="#E4E4E0" stroke-width="1"></path>
+
+          <rect x="44.5" y="72.5" width="8" height="8" fill="#F2C300" stroke="#111111" stroke-width="1"></rect>
+          <text x="58" y="80" font-size="9.5" fill="#4A4A47">Our own outbound</text>
+          <text x="58" y="96" font-size="11" font-weight="700" fill="#111111">2 new clients and 5 more demos</text>
+
+          <rect x="44.5" y="112.5" width="8" height="8" fill="#FFFFFF" stroke="#111111" stroke-width="1"></rect>
+          <text x="58" y="120" font-size="9.5" fill="#4A4A47">An events agency in the US</text>
+          <text x="58" y="136" font-size="11" font-weight="700" fill="#111111">27 campaigns and 527 replies</text>
+
+          <rect x="44.5" y="152.5" width="8" height="8" fill="#FFFFFF" stroke="#111111" stroke-width="1"></rect>
+          <text x="58" y="160" font-size="9.5" fill="#4A4A47">A stand builder in Canada</text>
+          <text x="58" y="176" font-size="11" font-weight="700" fill="#111111">9 campaigns live</text>
+
+          <rect x="44.5" y="192.5" width="8" height="8" fill="#FFFFFF" stroke="#111111" stroke-width="1"></rect>
+          <text x="58" y="200" font-size="9.5" fill="#4A4A47">Fintech companies</text>
+          <text x="58" y="216" font-size="11" font-weight="700" fill="#111111">One positive reply for every 200</text>
+          <text x="58" y="230" font-size="11" font-weight="700" fill="#111111">people contacted</text>
+
+          <rect x="44.5" y="246.5" width="8" height="8" fill="#FFFFFF" stroke="#111111" stroke-width="1"></rect>
+          <text x="58" y="254" font-size="9.5" fill="#4A4A47">An energy company in Germany</text>
+          <text x="58" y="270" font-size="11" font-weight="700" fill="#111111">2,651 hotels contacted, 271 replies,</text>
+          <text x="58" y="284" font-size="11" font-weight="700" fill="#111111">15 interested</text>
+
+          <rect x="44.5" y="300.5" width="8" height="8" fill="#FFFFFF" stroke="#111111" stroke-width="1"></rect>
+          <text x="58" y="308" font-size="9.5" fill="#4A4A47">An energy company</text>
+          <text x="58" y="324" font-size="11" font-weight="700" fill="#111111">715 companies with websites,</text>
+          <text x="58" y="338" font-size="11" font-weight="700" fill="#111111">727 with LinkedIn pages</text>
+
+          <rect x="44.5" y="354.5" width="8" height="8" fill="#FFFFFF" stroke="#111111" stroke-width="1"></rect>
+          <text x="58" y="362" font-size="9.5" fill="#4A4A47">An electrical contractor in the UK</text>
+          <text x="58" y="378" font-size="11" font-weight="700" fill="#111111">946 verified companies to approach</text>
+
+          <rect x="44.5" y="394.5" width="8" height="8" fill="#FFFFFF" stroke="#111111" stroke-width="1"></rect>
+          <text x="58" y="402" font-size="9.5" fill="#4A4A47">A UK property development group</text>
+          <text x="58" y="418" font-size="11" font-weight="700" fill="#111111">A site-finding platform:</text>
+          <text x="58" y="432" font-size="11" font-weight="700" fill="#111111">1,006 sites scored</text>
+
+          <rect x="44.5" y="448.5" width="8" height="8" fill="#FFFFFF" stroke="#111111" stroke-width="1"></rect>
+          <text x="58" y="456" font-size="9.5" fill="#4A4A47">A cybersecurity company</text>
+          <text x="58" y="472" font-size="11" font-weight="700" fill="#111111">566 managed security providers found</text>
+          <text x="58" y="486" font-size="11" font-weight="700" fill="#111111">and 344 qualified</text>
+
+          <rect x="44.5" y="502.5" width="8" height="8" fill="#FFFFFF" stroke="#111111" stroke-width="1"></rect>
+          <text x="58" y="510" font-size="9.5" fill="#4A4A47">A research firm</text>
+          <text x="58" y="526" font-size="11" font-weight="700" fill="#111111">Campaigns to 600+ software vendors</text>
+
+          <rect x="44.5" y="542.5" width="8" height="8" fill="#FFFFFF" stroke="#111111" stroke-width="1"></rect>
+          <text x="58" y="550" font-size="9.5" fill="#4A4A47">Buy-and-build groups</text>
+          <text x="58" y="566" font-size="11" font-weight="700" fill="#111111">We found and approached companies</text>
+          <text x="58" y="580" font-size="11" font-weight="700" fill="#111111">for them to acquire</text>
+
+          <rect x="44.5" y="596.5" width="8" height="8" fill="#FFFFFF" stroke="#111111" stroke-width="1"></rect>
+          <text x="58" y="604" font-size="9.5" fill="#4A4A47">Two HR software companies in the Middle East</text>
+          <text x="58" y="620" font-size="11" font-weight="700" fill="#111111">paid per meeting booked</text>
+
+          <!-- detail A callout on the first line -->
+          <ellipse cx="157" cy="92.5" rx="118" ry="12" fill="none" stroke="#111111" stroke-width="1" stroke-dasharray="3 3"></ellipse>
+          <path d="M275,92.5 H322" fill="none" stroke="#111111" stroke-width="1"></path>
+          <rect x="322" y="83.5" width="18" height="18" fill="#111111"></rect>
+          <text x="331" y="96.5" font-size="11" font-weight="700" fill="#FFFFFF" text-anchor="middle">A</text>
+          <path d="M340,92.5 H343.5 V668.5 H300.5 V677" fill="none" stroke="#111111" stroke-width="1"></path>
+          <path d="M295.5,671 L300.5,678 L305.5,671" fill="none" stroke="#111111" stroke-width="1.2"></path>
+
+          <!-- the line gauge laid over the sheet -->
+          <g transform="rotate(-2 21 180)">
+            <rect x="8.5" y="10.5" width="26" height="340" fill="#F6F6F3" stroke="#111111" stroke-width="1"></rect>
+            <rect x="8" y="10" width="26" height="340" fill="url(#rmGMinor)"></rect>
+            <rect x="8" y="10" width="26" height="340" fill="url(#rmGMajor)"></rect>
+            <circle cx="17" cy="26" r="4.5" fill="#ECECE9" stroke="#111111" stroke-width="1"></circle>
+            <rect x="8.5" y="87.5" width="26" height="9" fill="#F2C300" stroke="#111111" stroke-width="1"></rect>
+          </g>
+
+          <!-- detail A, enlarged -->
+          <rect x="20.5" y="680.5" width="311" height="210" fill="#FFFFFF" stroke="#111111" stroke-width="1"></rect>
+          <rect x="21" y="681" width="310" height="29" fill="#F6F6F3"></rect>
+          <line x1="20.5" y1="710.5" x2="331.5" y2="710.5" stroke="#111111" stroke-width="1"></line>
+          <text x="34" y="700" font-size="10" letter-spacing="1.2" fill="#4A4A47">DETAIL A</text>
+          <text x="318" y="700" font-size="10.5" font-weight="700" fill="#111111" text-anchor="end">Our own outbound</text>
+          <text x="34" y="796" font-family="'Doto', ui-monospace, monospace" font-weight="900" font-size="88" fill="#111111">2</text>
+          <text x="178" y="796" font-family="'Doto', ui-monospace, monospace" font-weight="900" font-size="88" fill="#111111">5</text>
+          <rect x="38.5" y="812.5" width="8" height="8" fill="#F2C300" stroke="#111111" stroke-width="1"></rect>
+          <text x="54" y="820.5" font-size="11" fill="#111111">new clients</text>
+          <rect x="182.5" y="812.5" width="8" height="8" fill="#111111"></rect>
+          <text x="198" y="820.5" font-size="11" fill="#111111">more demos</text>
+          <line x1="34" y1="836.5" x2="318" y2="836.5" stroke="#E4E4E0" stroke-width="1"></line>
+          <text x="34" y="852" font-size="9" letter-spacing="1" fill="#4A4A47">ABOUT 190 PROSPECTS CONTACTED</text>
+          <rect x="35" y="866" width="283.1" height="10" fill="url(#rmMini)"></rect>
+          <line x1="34" y1="876.5" x2="318" y2="876.5" stroke="#111111" stroke-width="1"></line>
+          <rect x="69.4" y="862" width="1.4" height="14.5" fill="#111111"></rect>
+          <rect x="119.9" y="862" width="1.4" height="14.5" fill="#111111"></rect>
+          <rect x="166.2" y="862" width="1.4" height="14.5" fill="#111111"></rect>
+          <rect x="230.7" y="862" width="1.4" height="14.5" fill="#111111"></rect>
+          <rect x="280.1" y="862" width="1.4" height="14.5" fill="#111111"></rect>
+          <rect x="147.7" y="858" width="3" height="18.5" fill="#F2C300" stroke="#111111" stroke-width="0.6"></rect>
+          <rect x="264.5" y="858" width="3" height="18.5" fill="#F2C300" stroke="#111111" stroke-width="0.6"></rect>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- LEAD SPECIMEN: OUR OWN OUTBOUND (dark band) · 920 -->
+<section id="own-outbound" style="height: 920px; box-sizing: border-box; padding: 72px 20px 0; background: #111111; color: #FFFFFF; display: flex; flex-direction: column">
+  <div style="display: flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #BDBDB8"><span style="display: block; width: 10px; height: 10px; background: #F2C300"></span>01 / In-house</div>
+  <h2 style="margin: 16px 0 0; font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 32px; line-height: 1.1; color: #FFFFFF">Our own outbound.</h2>
+  <p style="margin: 20px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 19px; line-height: 1.45; color: #BDBDB8">About 190 prospects contacted. Around 4% replied. 2 new clients and 5 more demos.</p>
+
+  <div style="margin-top: 32px; height: 575px; flex: none; box-sizing: border-box; border: 1px solid #2E2E2C; display: flex; flex-direction: column">
+    <div style="height: 40px; flex: none; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; padding: 0 14px; border-bottom: 1px solid #2E2E2C">
+      <div style="display: flex; align-items: center; gap: 12px"><div style="display: flex; gap: 5px"><span style="display: block; width: 8px; height: 8px; background: #F2C300"></span><span style="display: block; width: 8px; height: 8px; border: 1px solid #8A8A85; box-sizing: border-box"></span><span style="display: block; width: 8px; height: 8px; border: 1px solid #8A8A85; box-sizing: border-box"></span></div><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; color: #BDBDB8">results / own-outbound</span></div>
+      <span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10.5px; color: #BDBDB8">Fig. 1</span>
+    </div>
+    <!-- about 190 prospects on a ruler folded into two rows; 7 replies marked, 2 of them new clients -->
+    <svg width="348" height="232" viewBox="0 0 348 232" style="display: block; flex: none">
+      <defs>
+        <pattern id="ooTick" x="20" y="0" width="3.24" height="232" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="0.8" height="232" fill="#6B6B66"></rect></pattern>
+        <pattern id="ooTen" x="20" y="0" width="32.4" height="232" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="1.2" height="232" fill="#8A8A85"></rect></pattern>
+      </defs>
+      <g font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">
+        <text x="20" y="30" font-size="10" letter-spacing="1.4" fill="#8A8A85">PROSPECTS CONTACTED</text>
+        <text x="328" y="30" font-size="10" letter-spacing="1.4" fill="#BDBDB8" text-anchor="end">ABOUT 190</text>
+
+        <!-- row one -->
+        <rect x="20" y="80" width="306" height="20" fill="url(#ooTen)"></rect>
+        <rect x="20" y="88" width="306" height="12" fill="url(#ooTick)"></rect>
+        <line x1="20" y1="100.5" x2="326" y2="100.5" stroke="#ECECE9" stroke-width="1"></line>
+        <path class="cx-scan" d="M20,88 H326" fill="none" stroke="#F2C300" stroke-opacity="0.26" stroke-width="24" stroke-dasharray="30 400"></path>
+        <path class="cx-scan" d="M20,88 H326" fill="none" stroke="#F2C300" stroke-opacity="0.8" stroke-width="2" stroke-dasharray="30 400"></path>
+        <rect x="90.3" y="62" width="2" height="38.5" fill="#ECECE9"></rect>
+        <rect x="200.4" y="62" width="2" height="38.5" fill="#ECECE9"></rect>
+        <rect x="300.9" y="62" width="2" height="38.5" fill="#ECECE9"></rect>
+        <rect x="244.8" y="50" width="4" height="50.5" fill="#F2C300"></rect>
+
+        <!-- row two -->
+        <rect x="20" y="150" width="306" height="20" fill="url(#ooTen)"></rect>
+        <rect x="20" y="158" width="306" height="12" fill="url(#ooTick)"></rect>
+        <line x1="20" y1="170.5" x2="326" y2="170.5" stroke="#ECECE9" stroke-width="1"></line>
+        <path class="cx-scan" d="M20,158 H326" fill="none" stroke="#F2C300" stroke-opacity="0.26" stroke-width="24" stroke-dasharray="30 400" style="animation-delay: -2.5s"></path>
+        <path class="cx-scan" d="M20,158 H326" fill="none" stroke="#F2C300" stroke-opacity="0.8" stroke-width="2" stroke-dasharray="30 400" style="animation-delay: -2.5s"></path>
+        <rect x="132.4" y="132" width="2" height="38.5" fill="#ECECE9"></rect>
+        <rect x="239.3" y="132" width="2" height="38.5" fill="#ECECE9"></rect>
+        <rect x="189.7" y="120" width="4" height="50.5" fill="#F2C300"></rect>
+
+        <rect x="20.5" y="196.5" width="305" height="16" fill="none" stroke="#3A3A38" stroke-width="1"></rect>
+        <rect x="21" y="197" width="12.2" height="15" fill="#ECECE9"></rect>
+        <text x="44" y="208.5" font-size="9.5" letter-spacing="1.2" fill="#BDBDB8">AROUND 4% REPLIED</text>
+      </g>
+    </svg>
+    <div style="height: 301px; flex: none; box-sizing: border-box; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)); border-top: 1px solid #2E2E2C">
+      <div style="min-width: 0; box-sizing: border-box; padding: 20px 16px; display: flex; flex-direction: column; justify-content: space-between">
+        <div style="display: flex; align-items: flex-start; gap: 10px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10px; line-height: 1.4; letter-spacing: 0.08em; text-transform: uppercase; color: #BDBDB8"><span style="display: block; flex: none; width: 2px; height: 12px; margin-top: 1px; background: #8A8A85"></span><span>Prospects contacted</span></div>
+        <div>
+          <div style="font-family: 'Doto', ui-monospace, monospace; font-weight: 800; font-size: 16px; line-height: 1; color: #8A8A85">about</div>
+          <div style="margin-top: 6px; font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 56px; line-height: 1; color: #FFFFFF">190</div>
+        </div>
+      </div>
+      <div style="min-width: 0; box-sizing: border-box; padding: 20px 16px; border-left: 1px solid #2E2E2C; display: flex; flex-direction: column; justify-content: space-between">
+        <div style="display: flex; align-items: flex-start; gap: 10px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10px; line-height: 1.4; letter-spacing: 0.08em; text-transform: uppercase; color: #BDBDB8"><span style="display: block; flex: none; width: 12px; height: 6px; margin-top: 4px; background: #ECECE9"></span><span>Replied</span></div>
+        <div>
+          <div style="font-family: 'Doto', ui-monospace, monospace; font-weight: 800; font-size: 16px; line-height: 1; color: #8A8A85">around</div>
+          <div style="margin-top: 6px; font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 56px; line-height: 1; color: #FFFFFF">4%</div>
+        </div>
+      </div>
+      <div style="min-width: 0; box-sizing: border-box; padding: 20px 16px; border-top: 1px solid #2E2E2C; display: flex; flex-direction: column; justify-content: space-between">
+        <div style="display: flex; align-items: flex-start; gap: 10px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10px; line-height: 1.4; letter-spacing: 0.08em; text-transform: uppercase; color: #BDBDB8"><span style="display: block; flex: none; width: 5px; height: 14px; background: #F2C300"></span><span>New clients</span></div>
+        <div style="font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 56px; line-height: 1; color: #F2C300">2</div>
+      </div>
+      <div style="min-width: 0; box-sizing: border-box; padding: 20px 16px; border-top: 1px solid #2E2E2C; border-left: 1px solid #2E2E2C; display: flex; flex-direction: column; justify-content: space-between">
+        <div style="display: flex; align-items: flex-start; gap: 10px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10px; line-height: 1.4; letter-spacing: 0.08em; text-transform: uppercase; color: #BDBDB8"><span style="display: block; flex: none; width: 2px; height: 14px; background: #ECECE9"></span><span>More demos</span></div>
+        <div style="font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 56px; line-height: 1; color: #FFFFFF">5</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENT WORK · 7406 -->
+<section style="height: 7406px; box-sizing: border-box; padding: 72px 20px 0; background: #ECECE9; display: flex; flex-direction: column">
+  <div style="display: flex; align-items: center; justify-content: space-between">
+    <div style="display: flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #4A4A47"><span style="display: block; width: 10px; height: 10px; background: #F2C300; border: 1px solid #111111; box-sizing: border-box"></span>02 / Client work</div>
+    <div style="display: flex; align-items: center; gap: 16px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; color: #4A4A47">
+      <span style="display: flex; align-items: center; gap: 8px"><span style="display: block; width: 10px; height: 10px; background: #F2C300; border: 1px solid #111111; box-sizing: border-box"></span>Result</span>
+      <span style="display: flex; align-items: center; gap: 8px"><span style="display: block; width: 22px; height: 0; border-top: 1px dashed #111111"></span>Not counted</span>
+    </div>
+  </div>
+
+  <div style="margin-top: 32px; display: flex; flex-direction: column; gap: 16px">
+
+    <!-- Fig. 2 · events agency · 590 -->
+    <div id="events-agency" style="height: 590px; flex: none; box-sizing: border-box; background: #FFFFFF; border: 1px solid #CBCBC6; display: flex; flex-direction: column; overflow: hidden">
+      <div style="height: 36px; flex: none; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; padding: 0 14px; background: #F6F6F3; border-bottom: 1px solid #CBCBC6">
+        <div style="display: flex; align-items: center; gap: 12px"><div style="display: flex; gap: 5px"><span style="display: block; width: 8px; height: 8px; background: #111111"></span><span style="display: block; width: 8px; height: 8px; border: 1px solid #111111; box-sizing: border-box"></span><span style="display: block; width: 8px; height: 8px; border: 1px solid #111111; box-sizing: border-box"></span></div><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; color: #4A4A47">results / events-agency</span></div>
+        <span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10.5px; color: #4A4A47">Fig. 2</span>
+      </div>
+      <div style="flex: 1; min-height: 0; box-sizing: border-box; padding: 18px 16px 20px; display: flex; flex-direction: column; gap: 18px">
+        <div>
+          <h3 style="margin: 0; font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 22px; line-height: 1.1; color: #111111">An events agency in the US.</h3>
+          <p style="margin: 6px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 17px; line-height: 1.4; color: #4A4A47">27 campaigns and 527 replies by June 2026.</p>
+        </div>
+        <svg width="316" height="262" viewBox="0 0 316 262" style="display: block; flex: none">
+          <defs>
+            <pattern id="eaBlockM" x="0" y="22" width="22" height="34" patternUnits="userSpaceOnUse"><rect x="0.5" y="0.5" width="17" height="27" fill="#FFFFFF" stroke="#111111" stroke-width="1"></rect><rect x="0.5" y="0.5" width="17" height="5" fill="#111111"></rect><rect x="3.5" y="10" width="11" height="1.2" fill="#BDBDB8"></rect><rect x="3.5" y="14.5" width="7" height="1.2" fill="#BDBDB8"></rect><rect x="3.5" y="19" width="9" height="1.2" fill="#BDBDB8"></rect></pattern>
+            <pattern id="eaCellM" x="0" y="152" width="6" height="6" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="4.4" height="4.4" fill="#111111"></rect></pattern>
+          </defs>
+          <g font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">
+            <text x="0" y="12" font-size="9.5" letter-spacing="1" fill="#4A4A47">CAMPAIGNS</text>
+            <rect x="0" y="22" width="308" height="28" fill="url(#eaBlockM)"></rect>
+            <rect x="0" y="56" width="286" height="28" fill="url(#eaBlockM)"></rect>
+            <path d="M0,94.5 H300" fill="none" stroke="#111111" stroke-width="1"></path>
+            <rect x="300.5" y="90.5" width="8" height="8" fill="#111111"></rect>
+            <text x="316" y="112" font-size="10" fill="#111111" text-anchor="end">by June 2026</text>
+            <path d="M0.5,118 V126 H308.5 V118" fill="none" stroke="#111111" stroke-width="1"></path>
+            <path d="M93.5,126 V146" fill="none" stroke="#111111" stroke-width="1"></path>
+            <path d="M88.5,140 L93.5,147 L98.5,140" fill="none" stroke="#111111" stroke-width="1.2"></path>
+            <rect x="0" y="152" width="186" height="102" fill="url(#eaCellM)"></rect>
+            <rect x="204.5" y="152.5" width="8" height="8" fill="#F2C300" stroke="#111111" stroke-width="1"></rect>
+            <text x="219" y="160.5" font-size="10.5" font-weight="700" fill="#111111">replies</text>
+            <text x="204" y="180" font-size="9" letter-spacing="1" fill="#4A4A47">EACH SQUARE:</text>
+            <text x="204" y="193" font-size="9" letter-spacing="1" fill="#4A4A47">ONE REPLY</text>
+          </g>
+        </svg>
+        <div style="margin-top: auto; padding-top: 14px; border-top: 1px solid #E4E4E0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 16px; row-gap: 16px">
+          <div style="min-width: 0">
+            <div style="font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 44px; line-height: 1; color: #111111">27</div>
+            <div style="margin-top: 8px; display: flex; align-items: flex-start; gap: 8px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10px; line-height: 1.4; letter-spacing: 0.1em; text-transform: uppercase; color: #4A4A47"><span style="display: block; flex: none; width: 8px; height: 8px; margin-top: 3px; border: 1px solid #111111; box-sizing: border-box"></span><span>Campaigns</span></div>
+          </div>
+          <div style="min-width: 0">
+            <div style="font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 44px; line-height: 1; color: #111111">527</div>
+            <div style="margin-top: 8px; display: flex; align-items: flex-start; gap: 8px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10px; line-height: 1.4; letter-spacing: 0.1em; text-transform: uppercase; color: #4A4A47"><span style="display: block; flex: none; width: 8px; height: 8px; margin-top: 3px; background: #F2C300; border: 1px solid #111111; box-sizing: border-box"></span><span>Replies</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fig. 3 · stand builder · 512 -->
+    <div id="stand-builder" style="height: 512px; flex: none; box-sizing: border-box; background: #FFFFFF; border: 1px solid #CBCBC6; display: flex; flex-direction: column; overflow: hidden">
+      <div style="height: 36px; flex: none; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; padding: 0 14px; background: #F6F6F3; border-bottom: 1px solid #CBCBC6">
+        <div style="display: flex; align-items: center; gap: 12px"><div style="display: flex; gap: 5px"><span style="display: block; width: 8px; height: 8px; background: #111111"></span><span style="display: block; width: 8px; height: 8px; border: 1px solid #111111; box-sizing: border-box"></span><span style="display: block; width: 8px; height: 8px; border: 1px solid #111111; box-sizing: border-box"></span></div><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; color: #4A4A47">results / stand-builder</span></div>
+        <span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10.5px; color: #4A4A47">Fig. 3</span>
+      </div>
+      <div style="flex: 1; min-height: 0; box-sizing: border-box; padding: 18px 16px 20px; display: flex; flex-direction: column; gap: 18px">
+        <div>
+          <h3 style="margin: 0; font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 22px; line-height: 1.1; color: #111111">A stand builder in Canada.</h3>
+          <p style="margin: 6px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 17px; line-height: 1.4; color: #4A4A47">9 campaigns live for the spring 2027 shows.</p>
+        </div>
+        <svg width="316" height="186" viewBox="0 0 316 186" style="display: block; flex: none">
+          <g font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">
+            <text x="2" y="12" font-size="9.5" letter-spacing="1" fill="#4A4A47">SPRING 2027</text>
+            <rect x="274.5" y="4.5" width="8" height="8" fill="#F2C300" stroke="#111111" stroke-width="1"></rect>
+            <text x="314" y="12" font-size="9.5" letter-spacing="1" fill="#4A4A47" text-anchor="end">LIVE</text>
+            <path d="M2.5,28 V182 M26.5,28 V182 M50.5,28 V182 M74.5,28 V182 M98.5,28 V182 M122.5,28 V182 M146.5,28 V182 M170.5,28 V182 M194.5,28 V182 M218.5,28 V182 M242.5,28 V182 M266.5,28 V182 M290.5,28 V182 M314.5,28 V182" fill="none" stroke="#E4E4E0" stroke-width="1"></path>
+            <line x1="2" y1="24.5" x2="315" y2="24.5" stroke="#111111" stroke-width="1"></line>
+            <path d="M2.5,19 V24 M26.5,19 V24 M50.5,19 V24 M74.5,19 V24 M98.5,19 V24 M122.5,19 V24 M146.5,19 V24 M170.5,19 V24 M194.5,19 V24 M218.5,19 V24 M242.5,19 V24 M266.5,19 V24 M290.5,19 V24 M314.5,19 V24" fill="none" stroke="#111111" stroke-width="1"></path>
+
+            <rect x="4" y="36" width="68" height="20" fill="#111111"></rect>
+            <rect x="124" y="36" width="92" height="20" fill="#111111"></rect>
+            <rect x="52" y="66" width="68" height="20" fill="#111111"></rect>
+            <rect x="196" y="66" width="92" height="20" fill="#111111"></rect>
+            <rect x="28" y="96" width="116" height="20" fill="#111111"></rect>
+            <rect x="100" y="126" width="68" height="20" fill="#111111"></rect>
+            <rect x="220" y="126" width="92" height="20" fill="#111111"></rect>
+            <rect x="76" y="156" width="92" height="20" fill="#111111"></rect>
+            <rect x="244" y="156" width="68" height="20" fill="#111111"></rect>
+
+            <rect class="cx-live" x="10" y="43" width="6" height="6" fill="#F2C300"></rect>
+            <rect class="cx-live" x="130" y="43" width="6" height="6" fill="#F2C300"></rect>
+            <rect class="cx-live" x="58" y="73" width="6" height="6" fill="#F2C300"></rect>
+            <rect class="cx-live" x="202" y="73" width="6" height="6" fill="#F2C300"></rect>
+            <rect class="cx-live" x="34" y="103" width="6" height="6" fill="#F2C300"></rect>
+            <rect class="cx-live" x="106" y="133" width="6" height="6" fill="#F2C300"></rect>
+            <rect class="cx-live" x="226" y="133" width="6" height="6" fill="#F2C300"></rect>
+            <rect class="cx-live" x="82" y="163" width="6" height="6" fill="#F2C300"></rect>
+            <rect class="cx-live" x="250" y="163" width="6" height="6" fill="#F2C300"></rect>
+          </g>
+        </svg>
+        <div style="margin-top: auto; padding-top: 14px; border-top: 1px solid #E4E4E0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 16px; row-gap: 16px">
+          <div style="min-width: 0">
+            <div style="font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 44px; line-height: 1; color: #111111">9</div>
+            <div style="margin-top: 8px; display: flex; align-items: flex-start; gap: 8px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10px; line-height: 1.4; letter-spacing: 0.1em; text-transform: uppercase; color: #4A4A47"><span style="display: block; flex: none; width: 8px; height: 8px; margin-top: 3px; background: #F2C300; border: 1px solid #111111; box-sizing: border-box"></span><span>Campaigns live</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fig. 4 · fintech companies · 562 -->
+    <div id="fintech" style="height: 562px; flex: none; box-sizing: border-box; background: #FFFFFF; border: 1px solid #CBCBC6; display: flex; flex-direction: column; overflow: hidden">
+      <div style="height: 36px; flex: none; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; padding: 0 14px; background: #F6F6F3; border-bottom: 1px solid #CBCBC6">
+        <div style="display: flex; align-items: center; gap: 12px"><div style="display: flex; gap: 5px"><span style="display: block; width: 8px; height: 8px; background: #111111"></span><span style="display: block; width: 8px; height: 8px; border: 1px solid #111111; box-sizing: border-box"></span><span style="display: block; width: 8px; height: 8px; border: 1px solid #111111; box-sizing: border-box"></span></div><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; color: #4A4A47">results / fintech</span></div>
+        <span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10.5px; color: #4A4A47">Fig. 4</span>
+      </div>
+      <div style="flex: 1; min-height: 0; box-sizing: border-box; padding: 18px 16px 20px; display: flex; flex-direction: column; gap: 18px">
+        <div>
+          <h3 style="margin: 0; font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 22px; line-height: 1.1; color: #111111">Fintech companies.</h3>
+          <p style="margin: 6px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 17px; line-height: 1.4; color: #4A4A47">One positive reply for every 200 people contacted.</p>
+        </div>
+        <svg width="316" height="260" viewBox="0 0 316 260" style="display: block; flex: none">
+          <defs>
+            <pattern id="ftTickM" x="0" y="18" width="1.4" height="40" patternUnits="userSpaceOnUse"><rect x="0" y="28" width="0.6" height="12" fill="#8A8A85"></rect></pattern>
+            <pattern id="ftTenM" x="0" y="18" width="14" height="40" patternUnits="userSpaceOnUse"><rect x="0" y="22" width="1" height="18" fill="#111111"></rect></pattern>
+          </defs>
+          <g font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">
+            <text x="0.5" y="12" font-size="9.5" letter-spacing="1" fill="#4A4A47">PEOPLE CONTACTED</text>
+            <rect x="212.5" y="4.5" width="8" height="8" fill="#F2C300" stroke="#111111" stroke-width="1"></rect>
+            <text x="316" y="12" font-size="9.5" letter-spacing="1" fill="#4A4A47" text-anchor="end">POSITIVE REPLY</text>
+            <rect x="0" y="18" width="280" height="200" fill="url(#ftTickM)"></rect>
+            <rect x="0" y="18" width="280" height="200" fill="url(#ftTenM)"></rect>
+            <path d="M0,58.5 H280 M0,98.5 H280 M0,138.5 H280 M0,178.5 H280 M0,218.5 H280" fill="none" stroke="#111111" stroke-width="1"></path>
+            <text x="316" y="58" font-size="9.5" fill="#4A4A47" text-anchor="end">200</text>
+            <text x="316" y="98" font-size="9.5" fill="#4A4A47" text-anchor="end">200</text>
+            <text x="316" y="138" font-size="9.5" fill="#4A4A47" text-anchor="end">200</text>
+            <text x="316" y="178" font-size="9.5" fill="#4A4A47" text-anchor="end">200</text>
+            <text x="316" y="218" font-size="9.5" fill="#4A4A47" text-anchor="end">200</text>
+            <rect x="191.1" y="32" width="3" height="26.5" fill="#F2C300" stroke="#111111" stroke-width="0.6"></rect>
+            <rect x="80.5" y="72" width="3" height="26.5" fill="#F2C300" stroke="#111111" stroke-width="0.6"></rect>
+            <rect x="238.7" y="112" width="3" height="26.5" fill="#F2C300" stroke="#111111" stroke-width="0.6"></rect>
+            <rect x="31.5" y="152" width="3" height="26.5" fill="#F2C300" stroke="#111111" stroke-width="0.6"></rect>
+            <rect x="144.9" y="192" width="3" height="26.5" fill="#F2C300" stroke="#111111" stroke-width="0.6"></rect>
+            <text x="0.5" y="252" font-size="9" letter-spacing="1" fill="#4A4A47">EACH TICK: ONE PERSON</text>
+          </g>
+        </svg>
+        <div style="margin-top: auto; padding-top: 14px; border-top: 1px solid #E4E4E0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 16px; row-gap: 16px">
+          <div style="min-width: 0">
+            <div style="font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 44px; line-height: 1; color: #111111">1</div>
+            <div style="margin-top: 8px; display: flex; align-items: flex-start; gap: 8px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10px; line-height: 1.4; letter-spacing: 0.1em; text-transform: uppercase; color: #4A4A47"><span style="display: block; flex: none; width: 8px; height: 8px; margin-top: 3px; background: #F2C300; border: 1px solid #111111; box-sizing: border-box"></span><span>Positive reply</span></div>
+          </div>
+          <div style="min-width: 0">
+            <div style="font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 44px; line-height: 1; color: #111111">200</div>
+            <div style="margin-top: 8px; display: flex; align-items: flex-start; gap: 8px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10px; line-height: 1.4; letter-spacing: 0.1em; text-transform: uppercase; color: #4A4A47"><span style="display: block; flex: none; width: 2px; height: 12px; margin-top: 1px; background: #8A8A85"></span><span>People contacted</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fig. 5 · energy company · 642 -->
+    <div id="energy-company" style="height: 642px; flex: none; box-sizing: border-box; background: #FFFFFF; border: 1px solid #CBCBC6; display: flex; flex-direction: column; overflow: hidden">
+      <div style="height: 36px; flex: none; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; padding: 0 14px; background: #F6F6F3; border-bottom: 1px solid #CBCBC6">
+        <div style="display: flex; align-items: center; gap: 12px"><div style="display: flex; gap: 5px"><span style="display: block; width: 8px; height: 8px; background: #111111"></span><span style="display: block; width: 8px; height: 8px; border: 1px solid #111111; box-sizing: border-box"></span><span style="display: block; width: 8px; height: 8px; border: 1px solid #111111; box-sizing: border-box"></span></div><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; color: #4A4A47">results / energy-company</span></div>
+        <span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10.5px; color: #4A4A47">Fig. 5</span>
+      </div>
+      <div style="flex: 1; min-height: 0; box-sizing: border-box; padding: 18px 16px 20px; display: flex; flex-direction: column; gap: 18px">
+        <div>
+          <h3 style="margin: 0; font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 22px; line-height: 1.1; color: #111111">An energy company in Germany.</h3>
+          <p style="margin: 6px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 17px; line-height: 1.4; color: #4A4A47">2,651 hotels contacted, 271 replies, 15 interested.</p>
+        </div>
+        <svg width="316" height="220" viewBox="0 0 316 220" style="display: block; flex: none">
+          <defs>
+            <pattern id="enHatchM" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#CBCBC6" stroke-width="1"></line></pattern>
+          </defs>
+          <g font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">
+            <text x="0.5" y="20" font-size="9.5" letter-spacing="1" fill="#4A4A47">HOTELS CONTACTED</text>
+            <text x="200.5" y="74" font-size="9.5" letter-spacing="1" fill="#4A4A47">REPLIES</text>
+            <text x="316" y="150" font-size="9.5" letter-spacing="1" fill="#111111" text-anchor="end">INTERESTED</text>
+
+            <path d="M160.5,30.5 L200.5,84.93 L200.5,136.08 L160.5,190.5 Z" fill="#F6F6F3"></path>
+            <path d="M251.65,84.93 L287.65,104.48 L287.65,116.52 L251.65,136.08 Z" fill="#F6F6F3"></path>
+            <path d="M160.5,30.5 L200.5,84.93 M160.5,190.5 L200.5,136.08 M251.65,84.93 L287.65,104.48 M251.65,136.08 L287.65,116.52" fill="none" stroke="#111111" stroke-width="1"></path>
+
+            <rect x="0.5" y="30.5" width="160" height="160" fill="#FFFFFF" stroke="#111111" stroke-width="1"></rect>
+            <rect x="1" y="31" width="159" height="159" fill="url(#enHatchM)"></rect>
+            <rect x="200.5" y="84.93" width="51.15" height="51.15" fill="#111111"></rect>
+            <rect x="287.65" y="104.48" width="12.03" height="12.03" fill="#F2C300" stroke="#111111" stroke-width="1"></rect>
+            <circle cx="293.66" cy="110.5" r="16" fill="none" stroke="#111111" stroke-width="1" stroke-dasharray="2 3"></circle>
+
+            <text x="0.5" y="214" font-size="9" letter-spacing="1" fill="#4A4A47">SQUARES DRAWN TO SCALE BY AREA</text>
+          </g>
+        </svg>
+        <div style="margin-top: auto; padding-top: 14px; border-top: 1px solid #E4E4E0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 16px; row-gap: 16px">
+          <div style="min-width: 0">
+            <div style="font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 44px; line-height: 1; color: #111111">2,651</div>
+            <div style="margin-top: 8px; display: flex; align-items: flex-start; gap: 8px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10px; line-height: 1.4; letter-spacing: 0.1em; text-transform: uppercase; color: #4A4A47"><span style="display: block; flex: none; width: 8px; height: 8px; margin-top: 3px; border: 1px solid #111111; box-sizing: border-box"></span><span>Hotels contacted</span></div>
+          </div>
+          <div style="min-width: 0">
+            <div style="font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 44px; line-height: 1; color: #111111">271</div>
+            <div style="margin-top: 8px; display: flex; align-items: flex-start; gap: 8px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10px; line-height: 1.4; letter-spacing: 0.1em; text-transform: uppercase; color: #4A4A47"><span style="display: block; flex: none; width: 8px; height: 8px; margin-top: 3px; background: #111111"></span><span>Replies</span></div>
+          </div>
+          <div style="min-width: 0">
+            <div style="font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 44px; line-height: 1; color: #111111">15</div>
+            <div style="margin-top: 8px; display: flex; align-items: flex-start; gap: 8px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10px; line-height: 1.4; letter-spacing: 0.1em; text-transform: uppercase; color: #4A4A47"><span style="display: block; flex: none; width: 8px; height: 8px; margin-top: 3px; background: #F2C300; border: 1px solid #111111; box-sizing: border-box"></span><span>Interested</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fig. 6 · energy company, Italy's registry · 656 -->
+    <div id="energy-registry" style="height: 656px; flex: none; box-sizing: border-box; background: #FFFFFF; border: 1px solid #CBCBC6; display: flex; flex-direction: column; overflow: hidden">
+      <div style="height: 36px; flex: none; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; padding: 0 14px; background: #F6F6F3; border-bottom: 1px solid #CBCBC6">
+        <div style="display: flex; align-items: center; gap: 12px"><div style="display: flex; gap: 5px"><span style="display: block; width: 8px; height: 8px; background: #111111"></span><span style="display: block; width: 8px; height: 8px; border: 1px solid #111111; box-sizing: border-box"></span><span style="display: block; width: 8px; height: 8px; border: 1px solid #111111; box-sizing: border-box"></span></div><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; color: #4A4A47">results / energy-registry</span></div>
+        <span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10.5px; color: #4A4A47">Fig. 6</span>
+      </div>
+      <div style="flex: 1; min-height: 0; box-sizing: border-box; padding: 18px 16px 20px; display: flex; flex-direction: column; gap: 18px">
+        <div>
+          <h3 style="margin: 0; font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 22px; line-height: 1.1; color: #111111">An energy company.</h3>
+          <p style="margin: 6px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 17px; line-height: 1.4; color: #4A4A47">We turned Italy's official registry of energy service companies into a prospect list: 715 companies with websites, 727 with LinkedIn pages.</p>
+        </div>
+        <svg width="316" height="284" viewBox="0 0 316 284" style="display: block; flex: none">
+          <defs>
+            <pattern id="irSheetM" x="0" y="22" width="44" height="40" patternUnits="userSpaceOnUse"><rect x="0.5" y="0.5" width="30" height="39" fill="#FFFFFF" stroke="#111111" stroke-width="1"></rect><rect x="0.5" y="0.5" width="30" height="5" fill="#111111"></rect><rect x="5" y="12" width="21" height="1.2" fill="#BDBDB8"></rect><rect x="5" y="18" width="16" height="1.2" fill="#BDBDB8"></rect><rect x="5" y="24" width="19" height="1.2" fill="#BDBDB8"></rect><rect x="5" y="30" width="12" height="1.2" fill="#BDBDB8"></rect></pattern>
+            <pattern id="irWebM" x="8" y="122" width="5" height="5" patternUnits="userSpaceOnUse"><circle cx="2.5" cy="2.5" r="1.4" fill="#111111"></circle></pattern>
+            <pattern id="irLiM" x="173" y="122" width="5" height="5" patternUnits="userSpaceOnUse"><circle cx="2.5" cy="2.5" r="1.5" fill="none" stroke="#111111" stroke-width="0.7"></circle></pattern>
+          </defs>
+          <g font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">
+            <text x="0.5" y="12" font-size="9.5" letter-spacing="1" fill="#4A4A47">OFFICIAL REGISTRY</text>
+            <text x="316" y="12" font-size="9" letter-spacing="1" fill="#4A4A47" text-anchor="end">EACH DOT: ONE COMPANY</text>
+            <rect x="0" y="22" width="308" height="40" fill="url(#irSheetM)"></rect>
+            <path d="M0.5,70 V78 H294.5 V70" fill="none" stroke="#111111" stroke-width="1"></path>
+            <path d="M147.5,78 V104.5" fill="none" stroke="#111111" stroke-width="1"></path>
+            <rect x="157.5" y="84.5" width="8" height="8" fill="#F2C300" stroke="#111111" stroke-width="1"></rect>
+            <text x="172" y="92.5" font-size="9.5" letter-spacing="1" fill="#111111">PROSPECT LIST</text>
+            <path d="M75.5,114 V104.5 H240.5 V114" fill="none" stroke="#111111" stroke-width="1"></path>
+            <path d="M70.5,108 L75.5,115 L80.5,108 M235.5,108 L240.5,115 L245.5,108" fill="none" stroke="#111111" stroke-width="1.2"></path>
+            <rect x="8" y="122" width="135" height="130" fill="url(#irWebM)"></rect>
+            <rect x="8" y="252" width="65" height="5" fill="url(#irWebM)"></rect>
+            <rect x="173" y="122" width="135" height="130" fill="url(#irLiM)"></rect>
+            <rect x="173" y="252" width="125" height="5" fill="url(#irLiM)"></rect>
+            <text x="8" y="276" font-size="9.5" letter-spacing="1" fill="#111111">WITH WEBSITES</text>
+            <text x="173" y="276" font-size="9.5" letter-spacing="1" fill="#111111">WITH LINKEDIN PAGES</text>
+          </g>
+        </svg>
+        <div style="margin-top: auto; padding-top: 14px; border-top: 1px solid #E4E4E0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 16px; row-gap: 16px">
+          <div style="min-width: 0">
+            <div style="font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 44px; line-height: 1; color: #111111">715</div>
+            <div style="margin-top: 8px; display: flex; align-items: flex-start; gap: 8px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10px; line-height: 1.4; letter-spacing: 0.1em; text-transform: uppercase; color: #4A4A47"><span style="display: block; flex: none; width: 8px; height: 8px; margin-top: 3px; background: #111111; border-radius: 50%"></span><span>Companies with websites</span></div>
+          </div>
+          <div style="min-width: 0">
+            <div style="font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 44px; line-height: 1; color: #111111">727</div>
+            <div style="margin-top: 8px; display: flex; align-items: flex-start; gap: 8px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10px; line-height: 1.4; letter-spacing: 0.1em; text-transform: uppercase; color: #4A4A47"><span style="display: block; flex: none; width: 8px; height: 8px; margin-top: 3px; border: 1px solid #111111; border-radius: 50%; box-sizing: border-box"></span><span>With LinkedIn pages</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fig. 7 · electrical contractor · 806 -->
+    <div id="electrical-contractor" style="height: 806px; flex: none; box-sizing: border-box; background: #FFFFFF; border: 1px solid #CBCBC6; display: flex; flex-direction: column; overflow: hidden">
+      <div style="height: 36px; flex: none; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; padding: 0 14px; background: #F6F6F3; border-bottom: 1px solid #CBCBC6">
+        <div style="display: flex; align-items: center; gap: 12px"><div style="display: flex; gap: 5px"><span style="display: block; width: 8px; height: 8px; background: #111111"></span><span style="display: block; width: 8px; height: 8px; border: 1px solid #111111; box-sizing: border-box"></span><span style="display: block; width: 8px; height: 8px; border: 1px solid #111111; box-sizing: border-box"></span></div><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; color: #4A4A47">results / electrical-contractor</span></div>
+        <span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10.5px; color: #4A4A47">Fig. 7</span>
+      </div>
+      <div style="flex: 1; min-height: 0; box-sizing: border-box; padding: 18px 16px 20px; display: flex; flex-direction: column; gap: 18px">
+        <div>
+          <h3 style="margin: 0; font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 22px; line-height: 1.1; color: #111111">An electrical contractor in the UK.</h3>
+          <p style="margin: 6px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 17px; line-height: 1.4; color: #4A4A47">2,256 energy projects tracked. 1,462 solar and battery projects narrowed to 946 verified companies to approach.</p>
+        </div>
+        <svg width="316" height="430" viewBox="0 0 316 430" style="display: block; flex: none">
+          <defs>
+            <pattern id="ecCellM" x="0" y="14" width="5" height="5" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="3.6" height="3.6" fill="#4A4A47"></rect></pattern>
+            <pattern id="ecHatchM" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#CBCBC6" stroke-width="1"></line></pattern>
+          </defs>
+          <g font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">
+            <text x="0" y="9" font-size="9.5" letter-spacing="1" fill="#4A4A47">ENERGY PROJECTS</text>
+            <rect x="0" y="14" width="300" height="185" fill="url(#ecCellM)"></rect>
+            <rect x="0" y="199" width="180" height="5" fill="url(#ecCellM)"></rect>
+            <text x="0" y="222" font-size="9" letter-spacing="1" fill="#4A4A47">EACH SQUARE: ONE PROJECT</text>
+            <line x1="0" y1="234.5" x2="316" y2="234.5" stroke="#E4E4E0" stroke-width="1"></line>
+
+            <text x="0.5" y="256" font-size="9.5" letter-spacing="1" fill="#4A4A47">SOLAR AND BATTERY PROJECTS</text>
+            <path d="M0.5,300.5 L230.5,300.5 L149.3,338.5 L0.5,338.5 Z" fill="#F6F6F3"></path>
+            <path d="M0.5,300.5 V338.5 M230.5,300.5 L149.3,338.5" fill="none" stroke="#111111" stroke-width="1"></path>
+            <rect x="0.5" y="264.5" width="230" height="36" fill="#FFFFFF" stroke="#111111" stroke-width="1"></rect>
+            <rect x="1" y="265" width="229" height="35" fill="url(#ecHatchM)"></rect>
+            <rect x="149.3" y="338.5" width="81.2" height="36" fill="none" stroke="#CBCBC6" stroke-width="1" stroke-dasharray="3 3"></rect>
+            <rect x="0.5" y="338.5" width="148.8" height="36" fill="#111111"></rect>
+            <rect x="141.3" y="338.5" width="8" height="36" fill="#F2C300" stroke="#111111" stroke-width="1"></rect>
+            <text x="0.5" y="394" font-size="9.5" letter-spacing="1" fill="#111111">VERIFIED COMPANIES TO APPROACH</text>
+            <path d="M234,282.5 H246 M234,356.5 H272" fill="none" stroke="#BDBDB8" stroke-width="1" stroke-dasharray="1 3"></path>
+            <text x="316" y="290.5" font-family="'Doto', ui-monospace, monospace" font-weight="900" font-size="22" fill="#111111" text-anchor="end">1,462</text>
+            <text x="316" y="364.5" font-family="'Doto', ui-monospace, monospace" font-weight="900" font-size="22" fill="#111111" text-anchor="end">946</text>
+            <line x1="0.5" y1="410.5" x2="230.5" y2="410.5" stroke="#111111" stroke-width="1"></line>
+            <path d="M0.5,406 V415 M230.5,406 V415" fill="none" stroke="#111111" stroke-width="1"></path>
+            <text x="0.5" y="426" font-size="9" letter-spacing="1" fill="#4A4A47">BARS TO SCALE</text>
+          </g>
+        </svg>
+        <div style="margin-top: auto; padding-top: 14px; border-top: 1px solid #E4E4E0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 16px; row-gap: 16px">
+          <div style="min-width: 0">
+            <div style="font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 44px; line-height: 1; color: #111111">2,256</div>
+            <div style="margin-top: 8px; display: flex; align-items: flex-start; gap: 8px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10px; line-height: 1.4; letter-spacing: 0.1em; text-transform: uppercase; color: #4A4A47"><span style="display: block; flex: none; width: 8px; height: 8px; margin-top: 3px; background: #4A4A47"></span><span>Energy projects tracked</span></div>
+          </div>
+          <div style="min-width: 0">
+            <div style="font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 44px; line-height: 1; color: #111111">946</div>
+            <div style="margin-top: 8px; display: flex; align-items: flex-start; gap: 8px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10px; line-height: 1.4; letter-spacing: 0.1em; text-transform: uppercase; color: #4A4A47"><span style="display: block; flex: none; width: 8px; height: 8px; margin-top: 3px; background: #F2C300; border: 1px solid #111111; box-sizing: border-box"></span><span>Verified companies</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fig. 8 · property development group · 684 -->
+    <div id="property-development" style="height: 684px; flex: none; box-sizing: border-box; background: #FFFFFF; border: 1px solid #CBCBC6; display: flex; flex-direction: column; overflow: hidden">
+      <div style="height: 36px; flex: none; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; padding: 0 14px; background: #F6F6F3; border-bottom: 1px solid #CBCBC6">
+        <div style="display: flex; align-items: center; gap: 12px"><div style="display: flex; gap: 5px"><span style="display: block; width: 8px; height: 8px; background: #111111"></span><span style="display: block; width: 8px; height: 8px; border: 1px solid #111111; box-sizing: border-box"></span><span style="display: block; width: 8px; height: 8px; border: 1px solid #111111; box-sizing: border-box"></span></div><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; color: #4A4A47">results / property-development</span></div>
+        <span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10.5px; color: #4A4A47">Fig. 8</span>
+      </div>
+      <div style="flex: 1; min-height: 0; box-sizing: border-box; padding: 18px 16px 20px; display: flex; flex-direction: column; gap: 18px">
+        <div>
+          <h3 style="margin: 0; font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 22px; line-height: 1.1; color: #111111">A UK property development group.</h3>
+          <p style="margin: 6px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 17px; line-height: 1.4; color: #4A4A47">A site-finding platform: 1,006 sites scored, 817 of them in council areas where planning is most winnable.</p>
+        </div>
+        <svg width="316" height="310" viewBox="0 0 316 310" style="display: block; flex: none">
+          <defs>
+            <pattern id="pdWinM" x="0" y="24" width="9" height="9" patternUnits="userSpaceOnUse"><rect x="0.5" y="0.5" width="6.5" height="6.5" fill="#F2C300" stroke="#111111" stroke-width="0.6"></rect></pattern>
+            <pattern id="pdSiteM" x="0" y="24" width="9" height="9" patternUnits="userSpaceOnUse"><rect x="0.5" y="0.5" width="6.5" height="6.5" fill="#FFFFFF" stroke="#8A8A85" stroke-width="0.8"></rect></pattern>
+          </defs>
+          <g font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">
+            <text x="0" y="12" font-size="9.5" letter-spacing="1" fill="#4A4A47">SITES SCORED</text>
+            <rect x="150.5" y="4.5" width="8" height="8" fill="#F2C300" stroke="#111111" stroke-width="1"></rect>
+            <text x="316" y="12" font-size="9.5" letter-spacing="1" fill="#4A4A47" text-anchor="end">PLANNING MOST WINNABLE</text>
+            <rect x="0" y="24" width="315" height="207" fill="url(#pdWinM)"></rect>
+            <rect x="0" y="231" width="108" height="9" fill="url(#pdWinM)"></rect>
+            <rect x="108" y="231" width="207" height="9" fill="url(#pdSiteM)"></rect>
+            <rect x="0" y="240" width="315" height="36" fill="url(#pdSiteM)"></rect>
+            <rect x="0" y="276" width="234" height="9" fill="url(#pdSiteM)"></rect>
+            <text x="0" y="304" font-size="9" letter-spacing="1" fill="#4A4A47">EACH SQUARE: ONE SITE</text>
+          </g>
+        </svg>
+        <div style="margin-top: auto; padding-top: 14px; border-top: 1px solid #E4E4E0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 16px; row-gap: 16px">
+          <div style="min-width: 0">
+            <div style="font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 44px; line-height: 1; color: #111111">1,006</div>
+            <div style="margin-top: 8px; display: flex; align-items: flex-start; gap: 8px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10px; line-height: 1.4; letter-spacing: 0.1em; text-transform: uppercase; color: #4A4A47"><span style="display: block; flex: none; width: 8px; height: 8px; margin-top: 3px; border: 1px solid #111111; box-sizing: border-box"></span><span>Sites scored</span></div>
+          </div>
+          <div style="min-width: 0">
+            <div style="font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 44px; line-height: 1; color: #111111">817</div>
+            <div style="margin-top: 8px; display: flex; align-items: flex-start; gap: 8px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10px; line-height: 1.4; letter-spacing: 0.1em; text-transform: uppercase; color: #4A4A47"><span style="display: block; flex: none; width: 8px; height: 8px; margin-top: 3px; background: #F2C300; border: 1px solid #111111; box-sizing: border-box"></span><span>Planning most winnable</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fig. 9 · cybersecurity company · 818 -->
+    <div id="cybersecurity" style="height: 818px; flex: none; box-sizing: border-box; background: #FFFFFF; border: 1px solid #CBCBC6; display: flex; flex-direction: column; overflow: hidden">
+      <div style="height: 36px; flex: none; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; padding: 0 14px; background: #F6F6F3; border-bottom: 1px solid #CBCBC6">
+        <div style="display: flex; align-items: center; gap: 12px"><div style="display: flex; gap: 5px"><span style="display: block; width: 8px; height: 8px; background: #111111"></span><span style="display: block; width: 8px; height: 8px; border: 1px solid #111111; box-sizing: border-box"></span><span style="display: block; width: 8px; height: 8px; border: 1px solid #111111; box-sizing: border-box"></span></div><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; color: #4A4A47">results / cybersecurity</span></div>
+        <span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10.5px; color: #4A4A47">Fig. 9</span>
+      </div>
+      <div style="flex: 1; min-height: 0; box-sizing: border-box; padding: 18px 16px 20px; display: flex; flex-direction: column; gap: 18px">
+        <div>
+          <h3 style="margin: 0; font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 22px; line-height: 1.1; color: #111111">A cybersecurity company.</h3>
+          <p style="margin: 6px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 17px; line-height: 1.4; color: #4A4A47">566 managed security providers found and 344 qualified. 1,000 enterprise accounts researched. 561 conference attendees turned into 292 reachable people.</p>
+        </div>
+        <svg width="316" height="324" viewBox="0 0 316 324" style="display: block; flex: none">
+          <defs>
+            <pattern id="cyTickM" x="0.5" y="0" width="2.36" height="10" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="0.7" height="10" fill="#BDBDB8"></rect></pattern>
+            <pattern id="cyHatchM" x="0" y="0" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="5" stroke="#4A4A47" stroke-width="1"></line></pattern>
+          </defs>
+          <g font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">
+            <text x="0.5" y="13" font-size="9.5" letter-spacing="1" fill="#4A4A47">MANAGED SECURITY PROVIDERS FOUND</text>
+            <rect x="0.5" y="20.5" width="133.6" height="26" fill="#F6F6F3" stroke="#111111" stroke-width="1"></rect>
+            <rect x="1" y="21" width="132.6" height="25" fill="url(#cyTickM)"></rect>
+
+            <text x="0.5" y="66" font-size="9.5" letter-spacing="1" fill="#111111">QUALIFIED</text>
+            <rect x="81.7" y="72.5" width="52.4" height="26" fill="none" stroke="#CBCBC6" stroke-width="1" stroke-dasharray="3 3"></rect>
+            <rect x="0.5" y="72.5" width="81.2" height="26" fill="#111111"></rect>
+            <rect x="73.7" y="72.5" width="8" height="26" fill="#F2C300" stroke="#111111" stroke-width="1"></rect>
+            <path d="M134.1,46.5 L81.7,72.5" fill="none" stroke="#111111" stroke-width="1" stroke-dasharray="3 3"></path>
+
+            <line x1="0.5" y1="112.5" x2="316" y2="112.5" stroke="#E4E4E0" stroke-width="1"></line>
+            <text x="0.5" y="129" font-size="9.5" letter-spacing="1" fill="#4A4A47">ENTERPRISE ACCOUNTS RESEARCHED</text>
+            <rect x="0.5" y="136.5" width="236" height="26" fill="#FFFFFF" stroke="#111111" stroke-width="1"></rect>
+            <rect x="1" y="137" width="235" height="25" fill="url(#cyHatchM)"></rect>
+            <line x1="0.5" y1="176.5" x2="316" y2="176.5" stroke="#E4E4E0" stroke-width="1"></line>
+
+            <text x="0.5" y="193" font-size="9.5" letter-spacing="1" fill="#4A4A47">CONFERENCE ATTENDEES</text>
+            <rect x="0.5" y="200.5" width="132.4" height="26" fill="#F6F6F3" stroke="#111111" stroke-width="1"></rect>
+            <rect x="1" y="201" width="131.4" height="25" fill="url(#cyTickM)"></rect>
+
+            <text x="0.5" y="246" font-size="9.5" letter-spacing="1" fill="#111111">REACHABLE PEOPLE</text>
+            <rect x="69.4" y="252.5" width="63.5" height="26" fill="none" stroke="#CBCBC6" stroke-width="1" stroke-dasharray="3 3"></rect>
+            <rect x="0.5" y="252.5" width="68.9" height="26" fill="#111111"></rect>
+            <rect x="61.4" y="252.5" width="8" height="26" fill="#F2C300" stroke="#111111" stroke-width="1"></rect>
+            <path d="M132.9,226.5 L69.4,252.5" fill="none" stroke="#111111" stroke-width="1" stroke-dasharray="3 3"></path>
+
+            <path d="M138,33.5 H270 M138,85.5 H270 M240.5,149.5 H244 M136.9,213.5 H270 M136.9,265.5 H270" fill="none" stroke="#BDBDB8" stroke-width="1" stroke-dasharray="1 3"></path>
+            <text x="316" y="41.5" font-family="'Doto', ui-monospace, monospace" font-weight="900" font-size="22" fill="#111111" text-anchor="end">566</text>
+            <text x="316" y="93.5" font-family="'Doto', ui-monospace, monospace" font-weight="900" font-size="22" fill="#111111" text-anchor="end">344</text>
+            <text x="316" y="157.5" font-family="'Doto', ui-monospace, monospace" font-weight="900" font-size="22" fill="#111111" text-anchor="end">1,000</text>
+            <text x="316" y="221.5" font-family="'Doto', ui-monospace, monospace" font-weight="900" font-size="22" fill="#111111" text-anchor="end">561</text>
+            <text x="316" y="273.5" font-family="'Doto', ui-monospace, monospace" font-weight="900" font-size="22" fill="#111111" text-anchor="end">292</text>
+
+            <line x1="0.5" y1="298.5" x2="236.5" y2="298.5" stroke="#111111" stroke-width="1"></line>
+            <path d="M0.5,294 V303 M236.5,294 V303" fill="none" stroke="#111111" stroke-width="1"></path>
+            <text x="0.5" y="318" font-size="9" letter-spacing="1" fill="#4A4A47">BARS TO SCALE</text>
+          </g>
+        </svg>
+        <div style="margin-top: auto; padding-top: 14px; border-top: 1px solid #E4E4E0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 16px; row-gap: 16px">
+          <div style="min-width: 0">
+            <div style="font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 44px; line-height: 1; color: #111111">344</div>
+            <div style="margin-top: 8px; display: flex; align-items: flex-start; gap: 8px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10px; line-height: 1.4; letter-spacing: 0.1em; text-transform: uppercase; color: #4A4A47"><span style="display: block; flex: none; width: 8px; height: 8px; margin-top: 3px; background: #F2C300; border: 1px solid #111111; box-sizing: border-box"></span><span>Qualified providers</span></div>
+          </div>
+          <div style="min-width: 0">
+            <div style="font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 44px; line-height: 1; color: #111111">1,000</div>
+            <div style="margin-top: 8px; display: flex; align-items: flex-start; gap: 8px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10px; line-height: 1.4; letter-spacing: 0.1em; text-transform: uppercase; color: #4A4A47"><span style="display: block; flex: none; width: 8px; height: 8px; margin-top: 3px; background: #4A4A47"></span><span>Enterprise accounts</span></div>
+          </div>
+          <div style="min-width: 0">
+            <div style="font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 44px; line-height: 1; color: #111111">292</div>
+            <div style="margin-top: 8px; display: flex; align-items: flex-start; gap: 8px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10px; line-height: 1.4; letter-spacing: 0.1em; text-transform: uppercase; color: #4A4A47"><span style="display: block; flex: none; width: 8px; height: 8px; margin-top: 3px; background: #F2C300; border: 1px solid #111111; box-sizing: border-box"></span><span>Reachable people</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fig. 10 · research firm · 624 -->
+    <div id="research-firm" style="height: 624px; flex: none; box-sizing: border-box; background: #FFFFFF; border: 1px solid #CBCBC6; display: flex; flex-direction: column; overflow: hidden">
+      <div style="height: 36px; flex: none; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; padding: 0 14px; background: #F6F6F3; border-bottom: 1px solid #CBCBC6">
+        <div style="display: flex; align-items: center; gap: 12px"><div style="display: flex; gap: 5px"><span style="display: block; width: 8px; height: 8px; background: #111111"></span><span style="display: block; width: 8px; height: 8px; border: 1px solid #111111; box-sizing: border-box"></span><span style="display: block; width: 8px; height: 8px; border: 1px solid #111111; box-sizing: border-box"></span></div><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; color: #4A4A47">results / research-firm</span></div>
+        <span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10.5px; color: #4A4A47">Fig. 10</span>
+      </div>
+      <div style="flex: 1; min-height: 0; box-sizing: border-box; padding: 18px 16px 20px; display: flex; flex-direction: column; gap: 18px">
+        <div>
+          <h3 style="margin: 0; font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 22px; line-height: 1.1; color: #111111">A research firm.</h3>
+          <p style="margin: 6px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 17px; line-height: 1.4; color: #4A4A47">Campaigns to 600+ software vendors named in its reports, plus a briefing campaign to new vendors.</p>
+        </div>
+        <svg width="316" height="276" viewBox="0 0 316 276" style="display: block; flex: none">
+          <defs>
+            <pattern id="rfDotM" x="73" y="19" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="4" cy="4" r="1.8" fill="#111111"></circle></pattern>
+          </defs>
+          <g font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">
+            <text x="0.5" y="36" font-size="9" letter-spacing="1" fill="#4A4A47">ITS REPORTS</text>
+            <rect x="10.5" y="44.5" width="40" height="52" fill="#F6F6F3" stroke="#CBCBC6" stroke-width="1"></rect>
+            <rect x="5.5" y="49.5" width="40" height="52" fill="#FFFFFF" stroke="#CBCBC6" stroke-width="1"></rect>
+            <rect x="0.5" y="54.5" width="40" height="52" fill="#FFFFFF" stroke="#111111" stroke-width="1"></rect>
+            <rect x="0.5" y="54.5" width="40" height="6" fill="#111111"></rect>
+            <path d="M6,68 H34 M6,75 H29 M6,82 H32 M6,89 H24 M6,96 H31" fill="none" stroke="#BDBDB8" stroke-width="1.2"></path>
+            <path d="M41,80 L69,30 M41,80 L69,70 M41,80 L69,110 M41,80 L69,150" fill="none" stroke="#111111" stroke-width="0.8" stroke-dasharray="2 2"></path>
+
+            <text x="73" y="10" font-size="9.5" letter-spacing="1" fill="#4A4A47">SOFTWARE VENDORS</text>
+            <rect x="70.5" y="16.5" width="245" height="165" fill="#FFFFFF" stroke="#CBCBC6" stroke-width="1"></rect>
+            <rect x="73" y="19" width="240" height="160" fill="url(#rfDotM)"></rect>
+            <rect x="273.5" y="188.5" width="42" height="21" fill="none" stroke="#111111" stroke-width="1" stroke-dasharray="2 3"></rect>
+            <circle cx="279.5" cy="203.5" r="2" fill="none" stroke="#111111" stroke-width="1"></circle>
+            <circle cx="288.5" cy="203.5" r="2" fill="none" stroke="#111111" stroke-width="1"></circle>
+            <circle cx="279.5" cy="194.5" r="2" fill="none" stroke="#111111" stroke-width="1"></circle>
+            <path d="M298,199 H306 M302,195 V203" fill="none" stroke="#111111" stroke-width="1.2"></path>
+
+            <text x="28" y="236" font-size="9.5" letter-spacing="1" fill="#111111">BRIEFING CAMPAIGN</text>
+            <rect x="0.5" y="240.5" width="20" height="20" fill="#111111"></rect>
+            <rect x="6.5" y="246.5" width="8" height="8" fill="#F2C300"></rect>
+            <path d="M21,250.5 H188" fill="none" stroke="#111111" stroke-width="4.5"></path>
+            <path d="M21,250.5 H188" fill="none" stroke="#F2C300" stroke-width="2.5"></path>
+            <path d="M184,244.5 L192,250.5 L184,256.5" fill="none" stroke="#111111" stroke-width="1.4"></path>
+            <rect x="200.5" y="232.5" width="115" height="36" fill="none" stroke="#111111" stroke-width="1" stroke-dasharray="3 3"></rect>
+            <rect x="212.5" y="246.5" width="8" height="8" fill="#FFFFFF" stroke="#111111" stroke-width="1"></rect>
+            <text x="228" y="254" font-size="9.5" letter-spacing="1" fill="#111111">NEW VENDORS</text>
+          </g>
+        </svg>
+        <div style="margin-top: auto; padding-top: 14px; border-top: 1px solid #E4E4E0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 16px; row-gap: 16px">
+          <div style="min-width: 0">
+            <div style="font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 44px; line-height: 1; color: #111111">600+</div>
+            <div style="margin-top: 8px; display: flex; align-items: flex-start; gap: 8px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10px; line-height: 1.4; letter-spacing: 0.1em; text-transform: uppercase; color: #4A4A47"><span style="display: block; flex: none; width: 8px; height: 8px; margin-top: 3px; background: #111111; border-radius: 50%"></span><span>Software vendors</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fig. 11 · buy-and-build groups · 530 -->
+    <div id="buy-and-build" style="height: 530px; flex: none; box-sizing: border-box; background: #FFFFFF; border: 1px solid #CBCBC6; display: flex; flex-direction: column; overflow: hidden">
+      <div style="height: 36px; flex: none; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; padding: 0 14px; background: #F6F6F3; border-bottom: 1px solid #CBCBC6">
+        <div style="display: flex; align-items: center; gap: 12px"><div style="display: flex; gap: 5px"><span style="display: block; width: 8px; height: 8px; background: #111111"></span><span style="display: block; width: 8px; height: 8px; border: 1px solid #111111; box-sizing: border-box"></span><span style="display: block; width: 8px; height: 8px; border: 1px solid #111111; box-sizing: border-box"></span></div><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; color: #4A4A47">results / buy-and-build</span></div>
+        <span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10.5px; color: #4A4A47">Fig. 11</span>
+      </div>
+      <div style="flex: 1; min-height: 0; box-sizing: border-box; padding: 18px 16px 20px; display: flex; flex-direction: column; gap: 18px">
+        <div>
+          <h3 style="margin: 0; font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 22px; line-height: 1.1; color: #111111">Buy-and-build groups.</h3>
+          <p style="margin: 6px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 17px; line-height: 1.4; color: #4A4A47">We found and approached companies for them to acquire.</p>
+        </div>
+        <svg width="316" height="270" viewBox="0 0 316 270" style="display: block; flex: none">
+          <defs>
+            <pattern id="bbCoM" x="112" y="24" width="22" height="22" patternUnits="userSpaceOnUse"><rect x="0.5" y="0.5" width="13" height="13" fill="none" stroke="#CBCBC6" stroke-width="1" stroke-dasharray="2 2"></rect></pattern>
+          </defs>
+          <g font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">
+            <text x="112.5" y="12" font-size="9.5" letter-spacing="1" fill="#4A4A47">COMPANIES TO ACQUIRE</text>
+            <rect x="112" y="24" width="198" height="242" fill="url(#bbCoM)"></rect>
+
+            <rect x="0.5" y="118.5" width="48" height="48" fill="#FFFFFF" stroke="#111111" stroke-width="1"></rect>
+            <rect x="0.5" y="118.5" width="48" height="9" fill="#111111"></rect>
+            <rect x="8" y="134" width="7" height="7" fill="#4A4A47"></rect>
+            <rect x="20.5" y="134" width="7" height="7" fill="#4A4A47"></rect>
+            <rect x="33" y="134" width="7" height="7" fill="#4A4A47"></rect>
+            <rect x="8" y="146" width="7" height="7" fill="#4A4A47"></rect>
+            <rect x="33" y="146" width="7" height="7" fill="#4A4A47"></rect>
+            <rect x="20" y="152" width="8" height="14.5" fill="#111111"></rect>
+            <text x="0.5" y="184" font-size="9.5" letter-spacing="1" fill="#111111">ACQUIRING GROUP</text>
+
+            <path d="M49,142.5 H86" fill="none" stroke="#111111" stroke-width="1"></path>
+            <path d="M86,142.5 L134.5,53 M86,142.5 L200.5,31 M86,142.5 L244.5,75 M86,142.5 L156.5,97 M86,142.5 L222.5,141 M86,142.5 L266.5,163 M86,142.5 L134.5,207 M86,142.5 L266.5,229 M86,142.5 L200.5,251" fill="none" stroke="#111111" stroke-width="0.8"></path>
+            <circle cx="86" cy="142.5" r="2.5" fill="#111111"></circle>
+            <rect x="134.5" y="46.5" width="13" height="13" fill="#F2C300" stroke="#111111" stroke-width="1"></rect>
+            <rect x="200.5" y="24.5" width="13" height="13" fill="#F2C300" stroke="#111111" stroke-width="1"></rect>
+            <rect x="244.5" y="68.5" width="13" height="13" fill="#F2C300" stroke="#111111" stroke-width="1"></rect>
+            <rect x="156.5" y="90.5" width="13" height="13" fill="#F2C300" stroke="#111111" stroke-width="1"></rect>
+            <rect x="222.5" y="134.5" width="13" height="13" fill="#F2C300" stroke="#111111" stroke-width="1"></rect>
+            <rect x="266.5" y="156.5" width="13" height="13" fill="#F2C300" stroke="#111111" stroke-width="1"></rect>
+            <rect x="134.5" y="200.5" width="13" height="13" fill="#F2C300" stroke="#111111" stroke-width="1"></rect>
+            <rect x="266.5" y="222.5" width="13" height="13" fill="#F2C300" stroke="#111111" stroke-width="1"></rect>
+            <rect x="200.5" y="244.5" width="13" height="13" fill="#F2C300" stroke="#111111" stroke-width="1"></rect>
+          </g>
+        </svg>
+        <div style="margin-top: auto; padding-top: 14px; border-top: 1px solid #E4E4E0; display: flex; flex-wrap: wrap; align-items: center; column-gap: 24px; row-gap: 10px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10px; line-height: 1.4; letter-spacing: 0.1em; text-transform: uppercase; color: #4A4A47">
+          <div style="display: flex; align-items: center; gap: 8px"><span style="display: block; flex: none; width: 8px; height: 8px; border: 1px solid #111111; box-sizing: border-box"></span><span>Acquiring group</span></div>
+          <div style="display: flex; align-items: center; gap: 8px"><span style="display: block; flex: none; width: 8px; height: 8px; background: #F2C300; border: 1px solid #111111; box-sizing: border-box"></span><span>Found and approached</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fig. 12 · HR software companies · 630 -->
+    <div id="hr-software" style="height: 630px; flex: none; box-sizing: border-box; background: #FFFFFF; border: 1px solid #CBCBC6; display: flex; flex-direction: column; overflow: hidden">
+      <div style="height: 36px; flex: none; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; padding: 0 14px; background: #F6F6F3; border-bottom: 1px solid #CBCBC6">
+        <div style="display: flex; align-items: center; gap: 12px"><div style="display: flex; gap: 5px"><span style="display: block; width: 8px; height: 8px; background: #111111"></span><span style="display: block; width: 8px; height: 8px; border: 1px solid #111111; box-sizing: border-box"></span><span style="display: block; width: 8px; height: 8px; border: 1px solid #111111; box-sizing: border-box"></span></div><span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 11px; color: #4A4A47">results / hr-software</span></div>
+        <span style="font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 10.5px; color: #4A4A47">Fig. 12</span>
+      </div>
+      <div style="flex: 1; min-height: 0; box-sizing: border-box; padding: 18px 16px 20px; display: flex; flex-direction: column; gap: 18px">
+        <div>
+          <h3 style="margin: 0; font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 22px; line-height: 1.1; color: #111111">Two HR software companies in the Middle East.</h3>
+          <p style="margin: 6px 0 0; font-family: 'Newsreader', Georgia, serif; font-size: 17px; line-height: 1.4; color: #4A4A47">Outbound to HR and finance leaders, paid per meeting booked.</p>
+        </div>
+        <svg width="316" height="394" viewBox="0 0 316 394" style="display: block; flex: none">
+          <g font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">
+            <text x="56" y="14" font-size="9.5" letter-spacing="1" fill="#4A4A47">OUTBOUND</text>
+
+            <rect x="0.5" y="24.5" width="44" height="44" fill="#FFFFFF" stroke="#111111" stroke-width="1"></rect>
+            <rect x="7" y="32" width="7" height="7" fill="#4A4A47"></rect>
+            <rect x="18.5" y="32" width="7" height="7" fill="#4A4A47"></rect>
+            <rect x="30" y="32" width="7" height="7" fill="#4A4A47"></rect>
+            <rect x="7" y="44" width="7" height="7" fill="#4A4A47"></rect>
+            <rect x="30" y="44" width="7" height="7" fill="#4A4A47"></rect>
+            <rect x="18.5" y="54" width="7" height="14.5" fill="#111111"></rect>
+            <text x="0.5" y="82" font-size="9" letter-spacing="1" fill="#4A4A47">HR SOFTWARE</text>
+
+            <rect x="0.5" y="104.5" width="44" height="44" fill="#FFFFFF" stroke="#111111" stroke-width="1"></rect>
+            <rect x="7" y="112" width="7" height="7" fill="#4A4A47"></rect>
+            <rect x="18.5" y="112" width="7" height="7" fill="#4A4A47"></rect>
+            <rect x="30" y="112" width="7" height="7" fill="#4A4A47"></rect>
+            <rect x="7" y="124" width="7" height="7" fill="#4A4A47"></rect>
+            <rect x="30" y="124" width="7" height="7" fill="#4A4A47"></rect>
+            <rect x="18.5" y="134" width="7" height="14.5" fill="#111111"></rect>
+            <text x="0.5" y="162" font-size="9" letter-spacing="1" fill="#4A4A47">HR SOFTWARE</text>
+
+            <path d="M45,46 L116,46 M45,46 L116,136 M45,126 L116,50 M45,126 L116,140" fill="none" stroke="#111111" stroke-width="1"></path>
+
+            <circle cx="132" cy="34" r="6.5" fill="#FFFFFF" stroke="#111111" stroke-width="1.2"></circle>
+            <path d="M119,58 Q132,42 145,58" fill="none" stroke="#111111" stroke-width="1.2"></path>
+            <text x="132" y="74" font-size="9" letter-spacing="1" fill="#111111" text-anchor="middle">HR LEADERS</text>
+            <circle cx="132" cy="124" r="6.5" fill="#FFFFFF" stroke="#111111" stroke-width="1.2"></circle>
+            <path d="M119,148 Q132,132 145,148" fill="none" stroke="#111111" stroke-width="1.2"></path>
+            <text x="132" y="164" font-size="9" letter-spacing="1" fill="#111111" text-anchor="middle">FINANCE LEADERS</text>
+
+            <path d="M147,46 C190,46 190,90 232,90 M147,136 C190,136 190,104 232,104" fill="none" stroke="#111111" stroke-width="1"></path>
+            <path d="M226,86 L233,90 L226,94 M226,100 L233,104 L226,108" fill="none" stroke="#111111" stroke-width="1.2"></path>
+
+            <rect x="234.5" y="76.5" width="46" height="42" fill="#FFFFFF" stroke="#111111" stroke-width="1"></rect>
+            <rect x="234.5" y="76.5" width="46" height="10" fill="#111111"></rect>
+            <path d="M246,71 V81 M269,71 V81" fill="none" stroke="#111111" stroke-width="1.5"></path>
+            <rect x="242" y="94" width="8" height="8" fill="#E4E4E0"></rect>
+            <rect x="252" y="94" width="8" height="8" fill="#E4E4E0"></rect>
+            <rect x="242" y="104" width="8" height="8" fill="#E4E4E0"></rect>
+            <rect x="262.5" y="102.5" width="10" height="10" fill="#F2C300" stroke="#111111" stroke-width="1"></rect>
+            <text x="257.5" y="136" font-size="9" letter-spacing="1" fill="#111111" text-anchor="middle">MEETING BOOKED</text>
+
+            <path d="M257.5,144 V172" fill="none" stroke="#111111" stroke-width="1"></path>
+            <path d="M252.5,166 L257.5,173 L262.5,166" fill="none" stroke="#111111" stroke-width="1.2"></path>
+
+            <path d="M20.5,184 V350.5 H310" fill="none" stroke="#111111" stroke-width="1"></path>
+            <path d="M16,191 L20.5,183 L25,191 M303,346 L311,350.5 L303,355" fill="none" stroke="#111111" stroke-width="1.2"></path>
+            <text x="28" y="194" font-size="9.5" letter-spacing="1" fill="#4A4A47">PAID</text>
+            <text x="310" y="388" font-size="9.5" letter-spacing="1" fill="#4A4A47" text-anchor="end">TIME</text>
+
+            <path d="M21,350 H83.6 V322.5 H159 V294.5 H196.7" fill="none" stroke="#111111" stroke-width="2"></path>
+            <path d="M196.7,294.5 V266.5 H251.3 V238.5 H275.8 V210.5 H307.8" fill="none" stroke="#111111" stroke-width="1.2" stroke-dasharray="3 3"></path>
+            <rect x="79.6" y="318.5" width="8" height="8" fill="#F2C300" stroke="#111111" stroke-width="1"></rect>
+            <rect x="155" y="290.5" width="8" height="8" fill="#F2C300" stroke="#111111" stroke-width="1"></rect>
+            <rect x="192.7" y="262.5" width="8" height="8" fill="#FFFFFF" stroke="#8A8A85" stroke-width="1"></rect>
+            <rect x="247.3" y="234.5" width="8" height="8" fill="#FFFFFF" stroke="#8A8A85" stroke-width="1"></rect>
+            <rect x="271.8" y="206.5" width="8" height="8" fill="#FFFFFF" stroke="#8A8A85" stroke-width="1"></rect>
+
+            <rect x="78.6" y="358.5" width="10" height="10" fill="#FFFFFF" stroke="#111111" stroke-width="1"></rect>
+            <rect x="78.6" y="358.5" width="10" height="3" fill="#111111"></rect>
+            <rect x="154" y="358.5" width="10" height="10" fill="#FFFFFF" stroke="#111111" stroke-width="1"></rect>
+            <rect x="154" y="358.5" width="10" height="3" fill="#111111"></rect>
+            <rect x="191.7" y="358.5" width="10" height="10" fill="#FFFFFF" stroke="#8A8A85" stroke-width="1" stroke-dasharray="2 2"></rect>
+            <rect x="246.3" y="358.5" width="10" height="10" fill="#FFFFFF" stroke="#8A8A85" stroke-width="1" stroke-dasharray="2 2"></rect>
+            <rect x="270.8" y="358.5" width="10" height="10" fill="#FFFFFF" stroke="#8A8A85" stroke-width="1" stroke-dasharray="2 2"></rect>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSE · 796 -->
+<section style="height: 796px; box-sizing: border-box; padding: 48px 20px 0; background: #ECECE9">
+  <div style="height: 700px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #CBCBC6; padding: 24px; display: flex; flex-direction: column">
+    <h2 style="margin: 0; font-family: 'Doto', ui-monospace, monospace; font-weight: 900; font-size: 28px; line-height: 1.15; color: #111111">Tell us which job eats the most hours. We'll show you the agent for it.</h2>
+    <svg width="300" height="166" viewBox="0 0 300 166" style="display: block; margin-top: 28px; flex: none">
+      <g font-family="'JetBrains Mono', ui-monospace, Menlo, monospace">
+        <text x="0" y="12" font-size="11.5" fill="#111111">Building lists</text>
+        <line x1="0" y1="22" x2="300" y2="22" stroke="#CBCBC6" stroke-width="1" stroke-dasharray="1 3"></line>
+        <rect x="0" y="18" width="186" height="8" fill="#111111"></rect>
+        <text x="0" y="46" font-size="11.5" fill="#111111">Checking signals</text>
+        <line x1="0" y1="56" x2="300" y2="56" stroke="#CBCBC6" stroke-width="1" stroke-dasharray="1 3"></line>
+        <rect x="0" y="52" width="134" height="8" fill="#111111"></rect>
+        <text x="0" y="80" font-size="11.5" font-weight="700" fill="#111111">Researching accounts</text>
+        <text x="300" y="80" font-size="10" fill="#111111" text-anchor="end">most hours</text>
+        <line x1="0" y1="90" x2="300" y2="90" stroke="#CBCBC6" stroke-width="1" stroke-dasharray="1 3"></line>
+        <rect x="0" y="86" width="267" height="8" fill="#F2C300" stroke="#111111" stroke-width="1"></rect>
+        <text x="0" y="114" font-size="11.5" fill="#111111">Writing first drafts</text>
+        <line x1="0" y1="124" x2="300" y2="124" stroke="#CBCBC6" stroke-width="1" stroke-dasharray="1 3"></line>
+        <rect x="0" y="120" width="163" height="8" fill="#111111"></rect>
+        <text x="0" y="148" font-size="11.5" fill="#111111">Cleaning the CRM</text>
+        <line x1="0" y1="158" x2="300" y2="158" stroke="#CBCBC6" stroke-width="1" stroke-dasharray="1 3"></line>
+        <rect x="0" y="154" width="97" height="8" fill="#111111"></rect>
+      </g>
+    </svg>
+    <div style="margin-top: auto; box-sizing: border-box; background: #F2C300; padding: 24px; display: flex; flex-direction: column; gap: 24px">
+      <svg width="252" height="104" viewBox="0 0 252 104" style="display: block">
+        <defs>
+          <pattern id="clDots" x="4" y="4" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="2.4" fill="#111111" fill-opacity="0.16"></circle></pattern>
+        </defs>
+        <rect x="4" y="4" width="242" height="96" fill="url(#clDots)"></rect>
+        <circle cx="7" cy="51" r="3.6" fill="#111111"></circle>
+        <circle cx="29" cy="51" r="3.6" fill="#111111"></circle>
+        <circle cx="51" cy="51" r="3.6" fill="#111111"></circle>
+        <circle cx="73" cy="51" r="3.6" fill="#111111"></circle>
+        <circle cx="95" cy="51" r="3.6" fill="#111111"></circle>
+        <circle cx="117" cy="51" r="3.6" fill="#111111"></circle>
+        <circle cx="139" cy="51" r="3.6" fill="#111111"></circle>
+        <circle cx="161" cy="51" r="3.6" fill="#111111"></circle>
+        <circle cx="183" cy="51" r="3.6" fill="#111111"></circle>
+        <circle cx="205" cy="51" r="3.6" fill="#111111"></circle>
+        <circle cx="227" cy="51" r="3.6" fill="#111111"></circle>
+        <circle cx="183" cy="7" r="3.6" fill="#111111"></circle>
+        <circle cx="205" cy="29" r="3.6" fill="#111111"></circle>
+        <circle cx="205" cy="73" r="3.6" fill="#111111"></circle>
+        <circle cx="183" cy="95" r="3.6" fill="#111111"></circle>
+      </svg>
+      <a href="../book-a-call/" style="height: 56px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 14px; background: #111111; color: #FFFFFF; padding: 0 20px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 15px; font-weight: 700; text-decoration: none">Book a call<svg width="16" height="16" viewBox="0 0 16 16" style="display: block"><path d="M1,8 H14 M9,3 L14,8 L9,13" fill="none" stroke="#F2C300" stroke-width="1.6"></path></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER · 428 -->
+<footer style="height: 428px; box-sizing: border-box; padding: 40px 20px 0; background: #111111; display: flex; flex-direction: column; overflow: hidden">
+  <a href="../" style="display: flex; align-items: center; align-self: flex-start; height: 44px; color: #FFFFFF; text-decoration: none">
+    <img src="../assets/connexah-logo.png" alt="Connexah" style="height: 28px; width: auto; display: block">
+  </a>
+  <nav style="margin-top: 20px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 20px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 13px; color: #ECECE9">
+    <a href="../agents/" style="height: 44px; box-sizing: border-box; display: flex; align-items: center; border-top: 1px solid rgba(255,255,255,0.16); color: #ECECE9">Agents</a>
+    <a href="../services/" style="height: 44px; box-sizing: border-box; display: flex; align-items: center; border-top: 1px solid rgba(255,255,255,0.16); color: #ECECE9">Services</a>
+    <a href="../results/" style="height: 44px; box-sizing: border-box; display: flex; align-items: center; border-top: 1px solid rgba(255,255,255,0.16); color: #ECECE9">Results</a>
+    <a href="https://www.linkedin.com/company/connexah/" style="height: 44px; box-sizing: border-box; display: flex; align-items: center; border-top: 1px solid rgba(255,255,255,0.16); color: #ECECE9">LinkedIn</a>
+    <a href="mailto:humza@connexah.com?subject=Privacy" style="height: 44px; box-sizing: border-box; display: flex; align-items: center; border-top: 1px solid rgba(255,255,255,0.16); color: #ECECE9">Privacy</a>
+    <a href="mailto:humza@connexah.com?subject=Terms" style="height: 44px; box-sizing: border-box; display: flex; align-items: center; border-top: 1px solid rgba(255,255,255,0.16); color: #ECECE9">Terms</a>
+  </nav>
+  <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.16); display: flex; flex-direction: column; gap: 6px; font-family: 'JetBrains Mono', ui-monospace, Menlo, monospace; font-size: 12px; line-height: 1.5; color: #A8A8A3">
+    <span>Connexah Ltd, company number 17421940.</span>
+    <span>100 Berkshire Place, Wharfedale Road, Winnersh, Wokingham RG41 5RD.</span>
+  </div>
+</footer>
+
+</div>
+</template>
 
 <script>
 (function () {
