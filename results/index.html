@@ -2090,7 +2090,7 @@ a:hover{opacity:0.82}
 /* Connexah site: "alive" layer for the visuals.
    Makes the drawings and product windows keep moving while they are on screen:
    dotted connectors flow, lights travel along the yellow live routes, grids of cells flicker as if work is
-   being processed, yellow markers pulse, windows get a scan line and a blinking title-bar light,
+   being processed, yellow markers pulse, windows get a blinking title-bar light,
    Example cards type themselves out and numbers inside windows tick up.
    Everything pauses off screen and is skipped under prefers-reduced-motion. */
 (function () {
@@ -2109,10 +2109,6 @@ a:hover{opacity:0.82}
       '.cx-live .cx-blink{animation:cxBlink 2.6s ease-in-out infinite}',
       '@keyframes cxRec{0%,64%,100%{background-color:#111111}72%,88%{background-color:#F2C300}}',
       '.cx-live .cx-rec{animation:cxRec 3.4s steps(1,end) infinite}',
-      '@keyframes cxScan{0%{transform:translate3d(0,-70px,0);opacity:0}6%{opacity:1}90%{opacity:1}100%{transform:translate3d(0,var(--cxh,400px),0);opacity:0}}',
-      '.cx-scan{position:absolute;left:0;right:0;height:70px;pointer-events:none;z-index:3;opacity:0;',
-      'background:linear-gradient(to bottom,rgba(242,195,0,0),rgba(242,195,0,.10));border-bottom:1px solid rgba(242,195,0,.65)}',
-      '.cx-live .cx-scan{animation:cxScan var(--cxd,9s) cubic-bezier(.45,0,.55,1) infinite}',
       '@keyframes cxCaret{50%{opacity:0}}',
       '.cx-caret{display:inline-block;width:.55em;height:1em;margin-left:2px;vertical-align:-.12em;background:#F2C300;animation:cxCaret .8s steps(1,end) infinite}'
     ].join('\n');
@@ -2145,20 +2141,6 @@ a:hover{opacity:0.82}
     return out;
   }
 
-  function addScan(w, zoom) {
-    var win = w.win;
-    if (getComputedStyle(win).position === 'static') win.style.position = 'relative';
-    var top = w.bar.getBoundingClientRect().height / zoom;
-    var h = win.getBoundingClientRect().height / zoom - top;
-    if (h < 120) return;
-    var line = document.createElement('div');
-    line.className = 'cx-scan';
-    line.style.top = top + 'px';
-    line.style.setProperty('--cxh', (h + 10) + 'px');
-    line.style.setProperty('--cxd', (8 + Math.random() * 5).toFixed(1) + 's');
-    line.style.animationDelay = (-Math.random() * 8).toFixed(1) + 's';
-    win.appendChild(line);
-  }
 
   /* Example cards: dark boxes whose text is a quote. They type themselves out once. */
   function typers(win) {
@@ -2327,7 +2309,6 @@ a:hover{opacity:0.82}
     }, { threshold: 0.15 });
 
     windows(stage).forEach(function (w) {
-      addScan(w, zoom);
       var once = [];
       typers(w.win).forEach(function (el) { once.push(function () { type(el); }); });
       tickers(w.win).forEach(function (el) { once.push(function () { tickUp(el); }); });
