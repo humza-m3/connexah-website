@@ -1977,8 +1977,8 @@ a:hover{opacity:0.82}
     if (els.length > 260) { svg.classList.add('cx-wipe'); return { wipe: true, svg: svg }; }
     var parts = [];
     els.forEach(function (el) {
-      if (el.closest('[class]') && el.closest('[class]') !== svg && /cx-/.test(el.closest('[class]').getAttribute('class') || '')) return;
-      if (el.getAttribute('class')) return; // already animated by the design
+      for (var n = el, skip = false; n && n !== svg; n = n.parentNode) { if (n.getAttribute && n.getAttribute('class')) { skip = true; break; } }
+      if (skip) return; // already animated by the design
       var stroke = el.getAttribute('stroke') || getComputedStyle(el).stroke;
       if (!stroke || stroke === 'none') { parts.push({ el: el, fade: true }); el.style.opacity = '0'; return; }
       if (el.getAttribute('stroke-dasharray')) { parts.push({ el: el, fade: true }); el.style.opacity = '0'; return; }
@@ -2084,6 +2084,263 @@ a:hover{opacity:0.82}
       svg.__cxSvg = job; io.observe(svg);
     });
     counters(stage).forEach(function (el) { io.observe(el); });
+  };
+})();
+
+/* Connexah site: "alive" layer for the visuals.
+   Makes the drawings and product windows keep moving while they are on screen:
+   dotted connectors flow, lights travel along the yellow live routes, grids of cells flicker as if work is
+   being processed, yellow markers pulse, windows get a scan line and a blinking title-bar light,
+   Example cards type themselves out and numbers inside windows tick up.
+   Everything pauses off screen and is skipped under prefers-reduced-motion. */
+(function () {
+  var NS = 'http://www.w3.org/2000/svg';
+  var YELLOW = /^(#f2c300|#ffe66b|#ffd21f|#f2cf16)$/i;
+  var uid = 0;
+
+  function css() {
+    if (document.getElementById('cx-alive-css')) return;
+    var s = document.createElement('style');
+    s.id = 'cx-alive-css';
+    s.textContent = [
+      '@keyframes cxFlow{to{stroke-dashoffset:var(--cxp,-24px)}}',
+      '.cx-live .cx-flow,.cx-live.cx-flow{animation:cxFlow 1.4s linear infinite}',
+      '@keyframes cxBlink{0%,100%{opacity:1}50%{opacity:.3}}',
+      '.cx-live .cx-blink{animation:cxBlink 2.6s ease-in-out infinite}',
+      '@keyframes cxRec{0%,64%,100%{background-color:#111111}72%,88%{background-color:#F2C300}}',
+      '.cx-live .cx-rec{animation:cxRec 3.4s steps(1,end) infinite}',
+      '@keyframes cxScan{0%{transform:translate3d(0,-70px,0);opacity:0}6%{opacity:1}90%{opacity:1}100%{transform:translate3d(0,var(--cxh,400px),0);opacity:0}}',
+      '.cx-scan{position:absolute;left:0;right:0;height:70px;pointer-events:none;z-index:3;opacity:0;',
+      'background:linear-gradient(to bottom,rgba(242,195,0,0),rgba(242,195,0,.10));border-bottom:1px solid rgba(242,195,0,.65)}',
+      '.cx-live .cx-scan{animation:cxScan var(--cxd,9s) cubic-bezier(.45,0,.55,1) infinite}',
+      '@keyframes cxCaret{50%{opacity:0}}',
+      '.cx-caret{display:inline-block;width:.55em;height:1em;margin-left:2px;vertical-align:-.12em;background:#F2C300;animation:cxCaret .8s steps(1,end) infinite}'
+    ].join('\n');
+    document.head.appendChild(s);
+  }
+
+  /* Product windows: the framed panels with a title bar of three small squares. */
+  function windows(stage) {
+    var out = [];
+    stage.querySelectorAll('span').forEach(function (sp) {
+      var box = sp.parentElement;
+      if (!box || box.__cxSeen || box.children.length !== 3) return;
+      var ok = Array.prototype.every.call(box.children, function (c) {
+        var r = c.getBoundingClientRect(); return c.tagName === 'SPAN' && r.width > 4 && r.width < 16 && Math.abs(r.width - r.height) < 2;
+      });
+      box.__cxSeen = 1;
+      if (!ok) return;
+      var bar = box.parentElement; while (bar && bar.parentElement && bar.getBoundingClientRect().height < 24) bar = bar.parentElement;
+      if (!bar) return;
+      while (bar.parentElement && bar.parentElement.firstElementChild !== bar) bar = bar.parentElement;
+      var win = bar.parentElement;
+      if (!win || win.__cxWin || win.getBoundingClientRect().height < 140) return;
+      win.__cxWin = 1;
+      var filled = Array.prototype.find ? Array.prototype.find.call(box.children, function (c) {
+        return /rgb\(17, 17, 17\)/.test(getComputedStyle(c).backgroundColor);
+      }) : null;
+      if (filled) filled.classList.add('cx-rec');
+      out.push({ win: win, bar: bar });
+    });
+    return out;
+  }
+
+  function addScan(w, zoom) {
+    var win = w.win;
+    if (getComputedStyle(win).position === 'static') win.style.position = 'relative';
+    var top = w.bar.getBoundingClientRect().height / zoom;
+    var h = win.getBoundingClientRect().height / zoom - top;
+    if (h < 120) return;
+    var line = document.createElement('div');
+    line.className = 'cx-scan';
+    line.style.top = top + 'px';
+    line.style.setProperty('--cxh', (h + 10) + 'px');
+    line.style.setProperty('--cxd', (8 + Math.random() * 5).toFixed(1) + 's');
+    line.style.animationDelay = (-Math.random() * 8).toFixed(1) + 's';
+    win.appendChild(line);
+  }
+
+  /* Example cards: dark boxes whose text is a quote. They type themselves out once. */
+  function typers(win) {
+    var list = [];
+    win.querySelectorAll('div,p,span').forEach(function (el) {
+      if (el.children.length) return;
+      var t = (el.textContent || '').trim();
+      if (!/^["“]/.test(t) || t.length < 20 || t.length > 260) return;
+      var dark = el.closest('[style*="background: #111111"],[style*="background:#111111"]');
+      if (!dark || !win.contains(dark)) return;
+      list.push(el);
+    });
+    return list;
+  }
+  function type(el) {
+    if (el.__cxTyped) return; el.__cxTyped = 1;
+    var full = el.textContent; el.style.minHeight = el.offsetHeight + 'px';
+    el.textContent = '';
+    var txt = document.createTextNode(''); el.appendChild(txt);
+    var caret = document.createElement('span'); caret.className = 'cx-caret'; caret.setAttribute('aria-hidden', 'true'); el.appendChild(caret);
+    el.setAttribute('aria-label', full);
+    var i = 0;
+    (function tick() {
+      i = Math.min(full.length, i + 2); txt.textContent = full.slice(0, i);
+      if (i < full.length) setTimeout(tick, 22);
+      else setTimeout(function () { caret.remove(); el.style.minHeight = ''; el.removeAttribute('aria-label'); }, 2400);
+    })();
+  }
+
+  /* Numbers inside windows tick up once. */
+  function tickers(win) {
+    var list = [];
+    win.querySelectorAll('div,span,strong,td').forEach(function (el) {
+      if (el.children.length || el.hasAttribute('data-cx-count')) return;
+      var t = (el.textContent || '').trim();
+      if (!/^\d{1,3}(,\d{3})*$/.test(t)) return;
+      var v = parseInt(t.replace(/,/g, ''), 10); if (!(v >= 6)) return;
+      list.push(el);
+    });
+    return list;
+  }
+  function tickUp(el) {
+    if (el.__cxTick) return; el.__cxTick = 1;
+    var t = el.textContent.trim(), v = parseInt(t.replace(/,/g, ''), 10), start = null;
+    el.style.minWidth = el.offsetWidth + 'px';
+    (function step(ts) {
+      if (!ts) return requestAnimationFrame(step);
+      if (!start) start = ts;
+      var k = Math.min(1, (ts - start) / 1100), e = 1 - Math.pow(1 - k, 3);
+      el.textContent = Math.round(v * e).toLocaleString('en-GB');
+      if (k < 1) requestAnimationFrame(step); else el.textContent = t;
+    })();
+  }
+
+  /* true when the element, or a group between it and its <svg>, carries a class (the design animates those itself) */
+  function classedInside(el, svg) {
+    for (var n = el; n && n !== svg; n = n.parentNode) { if (n.getAttribute && n.getAttribute('class')) return true; }
+    return false;
+  }
+
+  /* SVG drawings. */
+  function prepSvg(svg) {
+    var job = { svg: svg, cells: [], smil: false };
+    // dotted connectors flow
+    svg.querySelectorAll('[stroke-dasharray]').forEach(function (el) {
+      if (classedInside(el, svg)) return;
+      var nums = (el.getAttribute('stroke-dasharray') || '').split(/[\s,]+/).map(parseFloat).filter(function (n) { return n > 0; });
+      if (!nums.length) return;
+      var period = nums.reduce(function (a, b) { return a + b; }, 0) * (nums.length % 2 ? 2 : 1);
+      if (period > 40) return;
+      el.style.setProperty('--cxp', (-period * 4) + 'px');
+      el.classList.add('cx-flow');
+    });
+    // lights travel along the yellow live routes
+    var routes = [];
+    svg.querySelectorAll('path,line,polyline').forEach(function (el) {
+      if (classedInside(el, svg)) return;
+      var st = el.getAttribute('stroke') || '';
+      if (!YELLOW.test(st)) return;
+      if (el.getAttribute('stroke-dasharray')) return;
+      var len = 0; try { len = el.getTotalLength(); } catch (e) {}
+      if (len < 36) return;
+      routes.push({ el: el, len: len });
+    });
+    routes.sort(function (a, b) { return b.len - a.len; }).slice(0, 3).forEach(function (r) {
+      var el = r.el, d = '';
+      if (el.tagName === 'path') d = el.getAttribute('d');
+      else if (el.tagName === 'line') d = 'M' + el.getAttribute('x1') + ',' + el.getAttribute('y1') + ' L' + el.getAttribute('x2') + ',' + el.getAttribute('y2');
+      else d = 'M' + (el.getAttribute('points') || '').trim().replace(/\s+/g, ' L');
+      if (!d) return;
+      var id = 'cxr' + (++uid);
+      var p = document.createElementNS(NS, 'path'); p.setAttribute('id', id); p.setAttribute('d', d); p.setAttribute('fill', 'none'); p.setAttribute('stroke', 'none');
+      var dur = Math.max(1.6, Math.min(7, r.len / 110)).toFixed(1) + 's';
+      function dot(rad, fill, op, stroke) {
+        var c = document.createElementNS(NS, 'circle'); c.setAttribute('r', rad); c.setAttribute('fill', fill); c.setAttribute('opacity', op);
+        if (stroke) { c.setAttribute('stroke', stroke); c.setAttribute('stroke-width', '1'); }
+        var m = document.createElementNS(NS, 'animateMotion'); m.setAttribute('dur', dur); m.setAttribute('repeatCount', 'indefinite');
+        var mp = document.createElementNS(NS, 'mpath'); mp.setAttribute('href', '#' + id); mp.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', '#' + id);
+        m.appendChild(mp); c.appendChild(m); return c;
+      }
+      var parent = el.parentNode;
+      parent.insertBefore(p, el.nextSibling);
+      parent.insertBefore(dot(8, '#F2C300', '0.28'), p.nextSibling);
+      parent.insertBefore(dot(3.5, '#F2C300', '1', '#111111'), p.nextSibling);
+      job.smil = true;
+    });
+    // small yellow markers pulse (a few, out of step)
+    var marks = Array.prototype.filter.call(svg.querySelectorAll('rect,circle'), function (el) {
+      if (el.getAttribute('class') || !YELLOW.test(el.getAttribute('fill') || '')) return false;
+      var w = +el.getAttribute('width') || 2 * (+el.getAttribute('r') || 0);
+      return w > 0 && w <= 16;
+    });
+    marks.sort(function () { return Math.random() - .5; }).slice(0, 5).forEach(function (el) {
+      el.classList.add('cx-blink'); el.style.animationDelay = (-Math.random() * 2.6).toFixed(2) + 's';
+    });
+    // grids of small cells flicker as if work is being processed
+    var groups = {};
+    svg.querySelectorAll('rect').forEach(function (el) {
+      var w = +el.getAttribute('width'), h = +el.getAttribute('height');
+      if (!(w > 0 && w <= 14 && h > 0 && h <= 14)) return;
+      var k = w + 'x' + h; (groups[k] = groups[k] || []).push(el);
+    });
+    Object.keys(groups).forEach(function (k) { if (groups[k].length >= 24) job.cells = job.cells.concat(groups[k]); });
+    if (job.smil) try { svg.pauseAnimations(); } catch (e) {}
+    return job;
+  }
+
+  /* HTML grids of small square cells (e.g. the shared-memory blocks) flicker too. */
+  function htmlGrids(stage) {
+    var out = [];
+    stage.querySelectorAll('div').forEach(function (box) {
+      var kids = box.children; if (kids.length < 20 || kids.length > 400) return;
+      var r0 = kids[0].getBoundingClientRect(); if (!(r0.width > 2 && r0.width <= 16)) return;
+      var same = 0;
+      for (var i = 0; i < kids.length; i++) { var r = kids[i].getBoundingClientRect(); if (Math.abs(r.width - r0.width) < 1 && Math.abs(r.height - r0.height) < 1) same++; }
+      if (same / kids.length > 0.9) out.push({ box: box, cells: Array.prototype.slice.call(kids) });
+    });
+    return out;
+  }
+
+  function flicker(cells, svg) {
+    if (!cells.length) return null;
+    return setInterval(function () {
+      var c = cells[Math.floor(Math.random() * cells.length)];
+      var prop = svg ? 'fill' : 'backgroundColor';
+      var old = svg ? c.getAttribute('fill') : c.style.backgroundColor;
+      if (svg) c.setAttribute('fill', '#F2C300'); else c.style.backgroundColor = '#F2C300';
+      setTimeout(function () { if (svg) c.setAttribute('fill', old || 'none'); else c.style.backgroundColor = old; }, 650);
+    }, 420 + Math.random() * 300);
+  }
+
+  window.cxAlive = function (stage) {
+    if (!stage || (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
+    css();
+    var zoom = parseFloat(stage.style.zoom) || 1;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        var z = en.target, on = en.isIntersecting;
+        z.classList.toggle('cx-live', on);
+        var j = z.__cxJob; if (!j) return;
+        if (j.svg && j.smil) try { on ? j.svg.unpauseAnimations() : j.svg.pauseAnimations(); } catch (e) {}
+        if (on && !j.timer && j.cells && j.cells.length) j.timer = flicker(j.cells, !!j.svg);
+        if (!on && j.timer) { clearInterval(j.timer); j.timer = null; }
+        if (on && j.once) { var fns = j.once; j.once = null; setTimeout(function () { fns.forEach(function (f) { f(); }); }, 500); }
+      });
+    }, { threshold: 0.15 });
+
+    windows(stage).forEach(function (w) {
+      addScan(w, zoom);
+      var once = [];
+      typers(w.win).forEach(function (el) { once.push(function () { type(el); }); });
+      tickers(w.win).forEach(function (el) { once.push(function () { tickUp(el); }); });
+      w.win.__cxJob = { once: once };
+      io.observe(w.win);
+    });
+    stage.querySelectorAll('svg').forEach(function (svg) {
+      var r = svg.getBoundingClientRect();
+      if (r.width / zoom < 90 || r.height / zoom < 40 || svg.closest('[data-cx-mq]')) return;
+      svg.__cxJob = prepSvg(svg);
+      io.observe(svg);
+    });
+    htmlGrids(stage).forEach(function (g) { g.box.__cxJob = { cells: g.cells }; io.observe(g.box); });
   };
 })();
 </script>
@@ -2205,6 +2462,7 @@ a:hover{opacity:0.82}
     });
     menu(); render();
     if (window.cxMotion) window.cxMotion(stage);
+    if (window.cxAlive) window.cxAlive(stage);
     if (st.custom === 'yes' && location.hash === '#custom-workflow') {
       var t = stage.querySelector('#custom-workflow'); if (t) setTimeout(function () { t.scrollIntoView(); }, 0);
     }
