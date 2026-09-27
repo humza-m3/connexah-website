@@ -1093,11 +1093,11 @@ a:hover{opacity:0.82}
     s.id = 'cx-alive-css';
     s.textContent = [
       '@keyframes cxFlow{to{stroke-dashoffset:var(--cxp,-24px)}}',
-      '.cx-live .cx-flow,.cx-live.cx-flow{animation:cxFlow 1.4s linear infinite}',
+      '.cx-onscreen .cx-flow,.cx-onscreen.cx-flow{animation:cxFlow 1.4s linear infinite}',
       '@keyframes cxBlink{0%,100%{opacity:1}50%{opacity:.3}}',
-      '.cx-live .cx-blink{animation:cxBlink 2.6s ease-in-out infinite}',
+      '.cx-onscreen .cx-blink{animation:cxBlink 2.6s ease-in-out infinite}',
       '@keyframes cxRec{0%,64%,100%{background-color:#111111}72%,88%{background-color:#F2C300}}',
-      '.cx-live .cx-rec{animation:cxRec 3.4s steps(1,end) infinite}',
+      '.cx-onscreen .cx-rec{animation:cxRec 3.4s steps(1,end) infinite}',
       '@keyframes cxCaret{50%{opacity:0}}',
       '.cx-caret{display:inline-block;width:.55em;height:1em;margin-left:2px;vertical-align:-.12em;background:#F2C300;animation:cxCaret .8s steps(1,end) infinite}'
     ].join('\n');
@@ -1240,7 +1240,8 @@ a:hover{opacity:0.82}
     var marks = Array.prototype.filter.call(svg.querySelectorAll('rect,circle'), function (el) {
       if (el.getAttribute('class') || !YELLOW.test(el.getAttribute('fill') || '')) return false;
       var w = +el.getAttribute('width') || 2 * (+el.getAttribute('r') || 0);
-      return w > 0 && w <= 16;
+      var h = +el.getAttribute('height') || w; // tall yellow chart bars are not markers
+      return w > 0 && w <= 16 && h <= 16;
     });
     marks.sort(function () { return Math.random() - .5; }).slice(0, 5).forEach(function (el) {
       el.classList.add('cx-blink'); el.style.animationDelay = (-Math.random() * 2.6).toFixed(2) + 's';
@@ -1288,7 +1289,7 @@ a:hover{opacity:0.82}
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
         var z = en.target, on = en.isIntersecting;
-        z.classList.toggle('cx-live', on);
+        z.classList.toggle('cx-onscreen', on); // never 'cx-live': the Results design pulses that class to 25% opacity
         var j = z.__cxJob; if (!j) return;
         if (j.svg && j.smil) try { on ? j.svg.unpauseAnimations() : j.svg.pauseAnimations(); } catch (e) {}
         if (on && !j.timer && j.cells && j.cells.length) j.timer = flicker(j.cells, !!j.svg);
