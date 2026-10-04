@@ -1,0 +1,30 @@
+# Connexah
+
+> Connexah is a go-to-market agency. We build and run custom AI agents for sales, pre-sales and marketing teams: outbound, market monitoring, account research and proposals.
+
+Connexah is a service business (an agency), not a software product or self-serve platform.
+Clients do not buy seats or licences. We design, build and run custom AI agents for them,
+and the client's team keeps the conversations with prospects and customers.
+
+## What we build
+- Signal and market monitoring agents: watch for buying signals and new projects in a market.
+- Outbound prospecting agents: find the right accounts and people, write and send outreach.
+- Account research agents: build context on target accounts before a call.
+- CRM monitoring agents: keep the CRM clean and flag deals that need attention.
+- Customer monitoring agents: watch existing customers for expansion and churn signals.
+- Pre-sales and proposal agents: estimation and proposal generation.
+
+## How clients work with us
+- Monthly retainer: we run a service such as outbound or intent monitoring.
+- On-demand hours: a set number of hours a month for support, changes and builds.
+- Project work: an agreed scope, delivered, and the client keeps it.
+
+## Pages
+- [Home](https://www.connexah.com/)
+- [Agents](https://www.connexah.com/agents/): the agents we build most often.
+- [Services](https://www.connexah.com/services/): ways to work with us.
+- [Results](https://www.connexah.com/results/): case studies, clients described without names.
+- [Book a call](https://www.connexah.com/book-a-call/)
+
+Company: Connexah Ltd, registered in England and Wales (company number 17421940).
+Contact: humza@connexah.com · LinkedIn: https://www.linkedin.com/company/connexah/
