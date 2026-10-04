@@ -2358,7 +2358,23 @@ a:hover{opacity:0.82}
       layout = want; bind();
     } else if (first) { bind(); }
     var base = layout === 'phone' ? 390 : 1440;
-    var z = layout === 'phone' ? Math.min(w / 390, 1.6) : Math.min(w / 1440, 1.5);
+    var z = layout === 'phone' ? Math.min(w / 390, 1.6) : Math.min(w / 1440, 1);
+    // Wide screens: no zoom. Bands stretch edge to edge, content stays in the 1280px column.
+    var extra = 0;
+    if (layout === 'desktop' && w > 1440) { extra = Math.floor((w - 1440) / 2); base = 1440 + extra * 2; }
+    var root = stage.firstElementChild;
+    if (layout === 'desktop' && root) {
+      root.style.width = base + 'px';
+      Array.prototype.forEach.call(root.children, function (el) {
+        if (el.dataset.cxPl === undefined) {
+          var cs = getComputedStyle(el);
+          el.dataset.cxPl = parseFloat(cs.paddingLeft) || 0;
+          el.dataset.cxPr = parseFloat(cs.paddingRight) || 0;
+        }
+        el.style.paddingLeft = (+el.dataset.cxPl + extra) + 'px';
+        el.style.paddingRight = (+el.dataset.cxPr + extra) + 'px';
+      });
+    }
     stage.style.width = base + 'px';
     stage.style.zoom = z;
   }
